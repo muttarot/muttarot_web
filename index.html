@@ -93,12 +93,16 @@ img{max-width:100%;}
 .eyebrow::before, .eyebrow::after{content:""; flex:1; height:1px; background:linear-gradient(90deg, transparent, var(--gold), transparent);}
 .hairline{height:1px; background:linear-gradient(90deg, transparent, var(--gold-deep) 15%, var(--gold-bright) 50%, var(--gold-deep) 85%, transparent); margin:2.6rem 0;}
 
-/* --- hieroglyph divider strip --- */
-.glyph-strip{
-  height:22px; width:100%; opacity:.55;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='22' viewBox='0 0 120 22'%3E%3Cg fill='none' stroke='%238a6a1e' stroke-width='1.4'%3E%3Cpath d='M8 4 v14 M4 6 h8 M4 16 h8'/%3E%3Ccircle cx='34' cy='11' r='6'/%3E%3Cpath d='M34 5 v12 M28 11 h12'/%3E%3Cpath d='M56 18 L62 4 L68 18 Z'/%3E%3Cpath d='M84 4 h14 M84 4 v6 h10 v6 h-14'/%3E%3Cpath d='M106 4 q6 7 0 14 M112 4 q-6 7 0 14'/%3E%3C/g%3E%3C/svg%3E");
-  background-repeat:repeat-x; background-size:120px 22px;
+/* --- cadeneta de texto decorativa (reemplaza los falsos "jeroglíficos") --- */
+.text-chain{
+  width:100%; overflow:hidden; background:var(--ink); border-top:1px solid var(--gold-deep); border-bottom:1px solid var(--gold-deep);
+  padding:10px 0;
 }
+.text-chain-track{
+  display:inline-block; white-space:nowrap; font-family:'Cinzel',serif; font-size:.72rem; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--gold-deep); animation:chainScroll 34s linear infinite;
+}
+@keyframes chainScroll{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
 
 /* --- nav --- */
 header{
@@ -232,10 +236,16 @@ section{padding:78px 0;}
 .tarot-card .position-label{font-family:'Cinzel',serif; font-size:.65rem; letter-spacing:.08em; text-transform:uppercase; color:var(--gold-deep); margin-bottom:6px; min-height:2.4em;}
 .tarot-card .face{
   height:190px; background:linear-gradient(160deg, var(--lapis) 0%, var(--lapis-deep) 100%);
-  border:2px solid var(--gold); border-radius:8px; display:flex; align-items:center; justify-content:center;
+  border:2px solid var(--gold); border-radius:8px; display:flex; flex-direction:column; align-items:center; justify-content:center;
   color:var(--gold-bright); font-family:'Cinzel Decorative',serif; font-size:1.8rem; box-shadow:var(--shadow);
-  cursor:default;
+  cursor:default; position:relative; overflow:hidden;
 }
+.tarot-card .face::before{
+  content:""; position:absolute; inset:8px; border:1px solid rgba(238,201,94,.45); border-radius:4px; pointer-events:none;
+}
+.face-symbol{font-size:2.6rem; line-height:1;}
+.face-suit{font-size:2.1rem; line-height:1;}
+.face-rank{font-family:'Cinzel',serif; font-size:.85rem; letter-spacing:.08em; text-transform:uppercase; margin-top:10px; color:var(--papyrus);}
 .tarot-card .cardname{margin-top:8px; font-family:'Cinzel',serif; font-size:.82rem; color:var(--ink);}
 .tarot-card .cardmean{font-size:.85rem; color:var(--ink-soft); margin-top:2px;}
 .tarot-card.reversed .face{transform:rotate(180deg);}
@@ -355,15 +365,28 @@ footer a{color:var(--gold-bright); text-decoration:none;}
 
     <div class="eye-widget">
       <button class="eye-btn" id="eyeBtn" aria-label="Revelar carta del día">
-        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 60 Q100 -10 190 60 Q100 90 10 60 Z" fill="none" stroke="#c9a227" stroke-width="3"/>
-          <circle cx="100" cy="58" r="24" fill="#123338" stroke="#eec95e" stroke-width="3"/>
-          <circle cx="100" cy="58" r="9" fill="#eec95e"/>
-          <path d="M100 82 v22 M100 104 q-10 6 -14 16 M100 104 q10 6 14 16" stroke="#c9a227" stroke-width="3" fill="none"/>
-          <path d="M62 66 q-14 10 -8 26" stroke="#c9a227" stroke-width="3" fill="none"/>
+        <svg viewBox="0 0 220 190" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="eyeGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#f2cb5c"/>
+              <stop offset="100%" stop-color="#c9a227"/>
+            </linearGradient>
+          </defs>
+          <!-- ceja -->
+          <path d="M22,62 Q90,16 136,30 Q162,40 183,58" fill="none" stroke="url(#eyeGoldGrad)" stroke-width="9" stroke-linecap="round"/>
+          <!-- ojo almendrado -->
+          <path d="M53,80 Q120,38 187,80 Q120,110 53,80 Z" fill="#123338" stroke="url(#eyeGoldGrad)" stroke-width="4"/>
+          <!-- pupila -->
+          <circle cx="120" cy="80" r="19" fill="#0d2327" stroke="url(#eyeGoldGrad)" stroke-width="4"/>
+          <circle cx="120" cy="80" r="7" fill="url(#eyeGoldGrad)"/>
+          <!-- línea descendente (cetro) -->
+          <path d="M184,84 L212,136" stroke="url(#eyeGoldGrad)" stroke-width="9" stroke-linecap="round"/>
+          <!-- marca en espiral bajo el ojo -->
+          <path d="M114,108 C107,130 95,134 89,150 C85,162 95,172 107,166 C115,162 112,152 103,152"
+                fill="none" stroke="url(#eyeGoldGrad)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
-      <div class="eye-hint">Toca el Ojo de Ra · Carta del día</div>
+      <div class="eye-hint">Toca el Ojo de Horus · Carta del día</div>
       <div class="eye-reveal" id="eyeReveal">
         <div class="card-name" id="eyeCardName"></div>
         <p id="eyeCardMeaning"></p>
@@ -373,7 +396,7 @@ footer a{color:var(--gold-bright); text-decoration:none;}
   </div>
 </section>
 
-<div class="glyph-strip"></div>
+<div class="text-chain" aria-hidden="true"><div class="text-chain-track">MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · </div></div>
 
 <!-- ================= FEATURES OVERVIEW ================= -->
 <section id="explora">
@@ -390,7 +413,7 @@ footer a{color:var(--gold-bright); text-decoration:none;}
         <p>Carta natal, tránsitos en tiempo real, retrogradaciones, sinastría y astrocartografía.</p>
       </div>
       <div class="panel feature-card">
-        <div class="icon">𓁟</div>
+        <div class="icon">❂</div>
         <h3>Tarot Raider</h3>
         <p>Las 78 cartas, seis tiradas rituales y un algoritmo que activa cartas según el tránsito planetario del día.</p>
       </div>
@@ -462,7 +485,7 @@ footer a{color:var(--gold-bright); text-decoration:none;}
   </div>
 </section>
 
-<div class="glyph-strip"></div>
+<div class="text-chain" aria-hidden="true"><div class="text-chain-track">MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · </div></div>
 
 <!-- ================= HOROSCOPO SEMANAL ================= -->
 <section id="horoscopo" class="alt-bg">
@@ -556,7 +579,7 @@ footer a{color:var(--gold-bright); text-decoration:none;}
   </div>
 </section>
 
-<div class="glyph-strip"></div>
+<div class="text-chain" aria-hidden="true"><div class="text-chain-track">MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · </div></div>
 
 <!-- ================= RUNAS ================= -->
 <section id="runas" class="alt-bg">
@@ -626,7 +649,7 @@ footer a{color:var(--gold-bright); text-decoration:none;}
   </div>
 </section>
 
-<div class="glyph-strip"></div>
+<div class="text-chain" aria-hidden="true"><div class="text-chain-track">MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · </div></div>
 
 <!-- ================= CONTACTO ================= -->
 <section class="contact" id="contacto">
@@ -637,19 +660,15 @@ footer a{color:var(--gold-bright); text-decoration:none;}
 
     <div class="price-row">
       <div class="price-card">
-        <div class="price-title">Tirada de Tarot</div>
-        <div class="price-amount">Desde 20€</div>
+        <div class="price-title">Consulta de 30 minutos</div>
+        <div class="price-amount">30€</div>
       </div>
       <div class="price-card">
-        <div class="price-title">Carta Natal completa</div>
-        <div class="price-amount">Desde 35€</div>
-      </div>
-      <div class="price-card">
-        <div class="price-title">Sinastría de pareja</div>
-        <div class="price-amount">Desde 40€</div>
+        <div class="price-title">Consulta de 1 hora</div>
+        <div class="price-amount">60€</div>
       </div>
     </div>
-    <p style="font-size:.85rem; color:var(--papyrus-deep); margin-top:-10px;">Precios orientativos — escríbeme y te confirmo el precio exacto según lo que necesites.</p>
+    <p style="font-size:.85rem; color:var(--papyrus-deep); margin-top:-10px;">Tarot, astrología, runas o numerología — el mismo precio por duración, elige el tema que necesites.</p>
 
     <div class="contact-row">
       <a class="btn btn-whatsapp" href="https://wa.me/34643129989?text=Hola%20Mut%20Tarot%2C%20quiero%20una%20consulta" target="_blank" rel="noopener" onclick="trackContact('whatsapp_contact')">
@@ -682,42 +701,54 @@ document.getElementById('menuToggle').addEventListener('click', function(){
 
 /* ============ TAROT DECK DATA ============ */
 const MAJOR = [
- {n:'El Loco', up:'comienzos, fe en lo desconocido, espontaneidad', rev:'imprudencia, dudas, riesgo mal calculado'},
- {n:'El Mago', up:'voluntad, habilidad, manifestación', rev:'manipulación, talento desperdiciado', planet:'Mercurio'},
- {n:'La Sacerdotisa', up:'intuición, misterio, sabiduría interior', rev:'secretos ocultos, desconexión interior'},
- {n:'La Emperatriz', up:'abundancia, fertilidad, placer', rev:'bloqueo creativo, dependencia', planet:'Venus'},
- {n:'El Emperador', up:'autoridad, estructura, control', rev:'rigidez, abuso de poder'},
- {n:'El Hierofante', up:'tradición, guía espiritual, aprendizaje', rev:'dogmatismo, rebeldía necesaria'},
- {n:'Los Enamorados', up:'unión, elección del corazón, valores alineados', rev:'desequilibrio, decisión pendiente'},
- {n:'El Carro', up:'determinación, victoria, avance', rev:'falta de dirección, agresividad'},
- {n:'La Fuerza', up:'coraje sereno, dominio de las pasiones', rev:'duda, energía mal canalizada'},
- {n:'El Ermitaño', up:'introspección, búsqueda interior, guía silenciosa', rev:'aislamiento excesivo, negación'},
- {n:'La Rueda de la Fortuna', up:'ciclos, destino, cambio favorable', rev:'resistencia al cambio, mala racha', planet:'Júpiter'},
- {n:'La Justicia', up:'equilibrio, verdad, causa y efecto', rev:'injusticia, decisiones evasivas'},
- {n:'El Colgado', up:'rendición, nueva perspectiva, pausa necesaria', rev:'estancamiento, sacrificio inútil'},
- {n:'La Muerte', up:'transformación, cierre de ciclo, renacimiento', rev:'resistencia al cambio, estancamiento'},
- {n:'La Templanza', up:'equilibrio, paciencia, alquimia interior', rev:'excesos, desarmonía'},
- {n:'El Diablo', up:'ataduras, deseo, sombra propia', rev:'liberación, ruptura de cadenas'},
- {n:'La Torre', up:'ruptura súbita, revelación, liberación', rev:'caos evitado, cambio postergado', planet:'Marte'},
- {n:'La Estrella', up:'esperanza, inspiración, fe renovada', rev:'desánimo, desconexión del propósito'},
- {n:'La Luna', up:'intuición, ilusión, subconsciente', rev:'confusión, miedos ocultos', planet:'Luna'},
- {n:'El Sol', up:'vitalidad, éxito, claridad', rev:'optimismo excesivo, éxito retrasado', planet:'Sol'},
- {n:'El Juicio', up:'renacimiento, llamado interior, absolución', rev:'autocrítica, oportunidad no tomada'},
- {n:'El Mundo', up:'plenitud, logro, integración', rev:'ciclo incompleto, falta de cierre', planet:'Saturno'}
+ {n:'El Loco', up:'comienzos, fe en lo desconocido, espontaneidad', rev:'imprudencia, dudas, riesgo mal calculado', sym:'✦'},
+ {n:'El Mago', up:'voluntad, habilidad, manifestación', rev:'manipulación, talento desperdiciado', planet:'Mercurio', sym:'☿'},
+ {n:'La Sacerdotisa', up:'intuición, misterio, sabiduría interior', rev:'secretos ocultos, desconexión interior', sym:'☽'},
+ {n:'La Emperatriz', up:'abundancia, fertilidad, placer', rev:'bloqueo creativo, dependencia', planet:'Venus', sym:'♀'},
+ {n:'El Emperador', up:'autoridad, estructura, control', rev:'rigidez, abuso de poder', sym:'♜'},
+ {n:'El Hierofante', up:'tradición, guía espiritual, aprendizaje', rev:'dogmatismo, rebeldía necesaria', sym:'☩'},
+ {n:'Los Enamorados', up:'unión, elección del corazón, valores alineados', rev:'desequilibrio, decisión pendiente', sym:'♡'},
+ {n:'El Carro', up:'determinación, victoria, avance', rev:'falta de dirección, agresividad', sym:'▶'},
+ {n:'La Fuerza', up:'coraje sereno, dominio de las pasiones', rev:'duda, energía mal canalizada', sym:'∞'},
+ {n:'El Ermitaño', up:'introspección, búsqueda interior, guía silenciosa', rev:'aislamiento excesivo, negación', sym:'✧'},
+ {n:'La Rueda de la Fortuna', up:'ciclos, destino, cambio favorable', rev:'resistencia al cambio, mala racha', planet:'Júpiter', sym:'☸'},
+ {n:'La Justicia', up:'equilibrio, verdad, causa y efecto', rev:'injusticia, decisiones evasivas', sym:'⚖'},
+ {n:'El Colgado', up:'rendición, nueva perspectiva, pausa necesaria', rev:'estancamiento, sacrificio inútil', sym:'↓'},
+ {n:'La Muerte', up:'transformación, cierre de ciclo, renacimiento', rev:'resistencia al cambio, estancamiento', sym:'☠'},
+ {n:'La Templanza', up:'equilibrio, paciencia, alquimia interior', rev:'excesos, desarmonía', sym:'⚗'},
+ {n:'El Diablo', up:'ataduras, deseo, sombra propia', rev:'liberación, ruptura de cadenas', sym:'⛓'},
+ {n:'La Torre', up:'ruptura súbita, revelación, liberación', rev:'caos evitado, cambio postergado', planet:'Marte', sym:'⚡'},
+ {n:'La Estrella', up:'esperanza, inspiración, fe renovada', rev:'desánimo, desconexión del propósito', sym:'★'},
+ {n:'La Luna', up:'intuición, ilusión, subconsciente', rev:'confusión, miedos ocultos', planet:'Luna', sym:'☾'},
+ {n:'El Sol', up:'vitalidad, éxito, claridad', rev:'optimismo excesivo, éxito retrasado', planet:'Sol', sym:'☀'},
+ {n:'El Juicio', up:'renacimiento, llamado interior, absolución', rev:'autocrítica, oportunidad no tomada', sym:'↑'},
+ {n:'El Mundo', up:'plenitud, logro, integración', rev:'ciclo incompleto, falta de cierre', planet:'Saturno', sym:'⊕'}
 ];
 const SUITS=[{n:'Oros',tema:'el dinero, el trabajo y lo material'},{n:'Copas',tema:'las emociones, el amor y los vínculos'},{n:'Espadas',tema:'el pensamiento, la verdad y el conflicto'},{n:'Bastos',tema:'la acción, la pasión y la creación'}];
 const NUM_KEY=[{r:'As',k:'una semilla pura, un comienzo'},{r:'2',k:'equilibrio y elección'},{r:'3',k:'crecimiento y colaboración'},{r:'4',k:'estructura y estabilidad'},{r:'5',k:'tensión y cambio necesario'},{r:'6',k:'armonía y generosidad'},{r:'7',k:'reflexión y prueba interior'},{r:'8',k:'maestría y poder aplicado'},{r:'9',k:'culminación cercana'},{r:'10',k:'plenitud y cierre de ciclo'}];
 const COURT=[{r:'Paje',k:'mensajero, aprendizaje, curiosidad'},{r:'Caballero',k:'acción, búsqueda, movimiento'},{r:'Reina',k:'dominio interior, madurez receptiva'},{r:'Rey',k:'maestría exterior, autoridad'}];
 
-let DECK = MAJOR.map(c=>({name:c.n, up:c.up, rev:c.rev, planet:c.planet||null, arcana:'Mayor'}));
+const SUIT_ICON = {Oros:'⊙', Copas:'▽', Espadas:'†', Bastos:'▲'};
+
+let DECK = MAJOR.map(c=>({name:c.n, up:c.up, rev:c.rev, planet:c.planet||null, arcana:'Mayor', sym:c.sym}));
 SUITS.forEach(s=>{
   NUM_KEY.forEach(nk=>{
-    DECK.push({name:`${nk.r} de ${s.n}`, up:`${nk.k}, en ${s.tema}`, rev:`bloqueo o exceso en ${s.tema}`, planet:null, arcana:s.n});
+    DECK.push({name:`${nk.r} de ${s.n}`, up:`${nk.k}, en ${s.tema}`, rev:`bloqueo o exceso en ${s.tema}`, planet:null, arcana:s.n, rank:nk.r});
   });
   COURT.forEach(ct=>{
-    DECK.push({name:`${ct.r} de ${s.n}`, up:`${ct.k}, aplicado a ${s.tema}`, rev:`sombra de ${ct.k.split(',')[0]} en ${s.tema}`, planet:null, arcana:s.n});
+    DECK.push({name:`${ct.r} de ${s.n}`, up:`${ct.k}, aplicado a ${s.tema}`, rev:`sombra de ${ct.k.split(',')[0]} en ${s.tema}`, planet:null, arcana:s.n, rank:ct.r});
   });
 });
+
+/* ============ ROSTRO DE CARTA (símbolo único por arcano, sin depender de
+   fuentes jeroglíficas egipcias que no todos los dispositivos tienen) ============ */
+function cardFaceHTML(card){
+  if(card.arcana==='Mayor'){
+    return `<div class="face"><span class="face-symbol">${card.sym||'✦'}</span></div>`;
+  }
+  const icon = SUIT_ICON[card.arcana] || '◆';
+  return `<div class="face"><span class="face-suit">${icon}</span><span class="face-rank">${card.rank||''}</span></div>`;
+}
 
 /* ============ SEEDED RNG ============ */
 function hashString(s){let h=1779033703^s.length;for(let i=0;i<s.length;i++){h=Math.imul(h^s.charCodeAt(i),3432918353);h=h<<13|h>>>19;}return (h^h>>>16)>>>0;}
@@ -830,7 +861,7 @@ document.getElementById('drawBtn').addEventListener('click', ()=>{
     const div=document.createElement('div');
     div.className='tarot-card'+(d.reversed?' reversed':'');
     div.innerHTML = `<div class="position-label">${positions[i]}</div>
-      <div class="face">𓂀</div>
+      ${cardFaceHTML(d.card)}
       <div class="cardname">${d.card.name}${d.reversed?' (inv.)':''}</div>
       <div class="cardmean">${d.reversed?d.card.rev:d.card.up}</div>`;
     layout.appendChild(div);
@@ -850,30 +881,30 @@ document.getElementById('eyeBtn').addEventListener('click', ()=>{
 
 /* ============ RUNES ============ */
 const RUNES=[
- {n:'Fehu',k:'riqueza, ganancia, energía en movimiento'},
- {n:'Uruz',k:'fuerza vital, vigor, voluntad primitiva'},
- {n:'Thurisaz',k:'confrontación, protección, ruptura necesaria'},
- {n:'Ansuz',k:'comunicación, sabiduría recibida, mensaje'},
- {n:'Raidho',k:'viaje, ritmo, movimiento con propósito'},
- {n:'Kenaz',k:'conocimiento, luz interior, creatividad'},
- {n:'Gebo',k:'intercambio, regalo, equilibrio entre dar y recibir'},
- {n:'Wunjo',k:'alegría, armonía, recompensa merecida'},
- {n:'Hagalaz',k:'disrupción, fuerza natural, cambio inevitable'},
- {n:'Nauthiz',k:'necesidad, resistencia, lección forjada en dificultad'},
- {n:'Isa',k:'quietud, pausa, congelamiento temporal'},
- {n:'Jera',k:'cosecha, ciclo cumplido, resultado del esfuerzo'},
- {n:'Eihwaz',k:'resiliencia, conexión entre mundos, transformación'},
- {n:'Perthro',k:'destino, misterio, lo oculto que se revela'},
- {n:'Algiz',k:'protección, conexión superior, instinto de defensa'},
- {n:'Sowilo',k:'éxito, energía solar, claridad total'},
- {n:'Tiwaz',k:'justicia, honor, sacrificio con propósito'},
- {n:'Berkano',k:'nuevo crecimiento, fertilidad, cuidado'},
- {n:'Ehwaz',k:'avance conjunto, confianza, movimiento leal'},
- {n:'Mannaz',k:'humanidad, el yo social, cooperación'},
- {n:'Laguz',k:'flujo emocional, intuición, aguas profundas'},
- {n:'Ingwaz',k:'potencial acumulado, fertilidad interior, gestación'},
- {n:'Dagaz',k:'amanecer, avance decisivo, transformación positiva'},
- {n:'Othala',k:'herencia, hogar, valores heredados'}
+ {n:'Fehu',k:'riqueza, ganancia, energía en movimiento', g:'ᚠ'},
+ {n:'Uruz',k:'fuerza vital, vigor, voluntad primitiva', g:'ᚢ'},
+ {n:'Thurisaz',k:'confrontación, protección, ruptura necesaria', g:'ᚦ'},
+ {n:'Ansuz',k:'comunicación, sabiduría recibida, mensaje', g:'ᚨ'},
+ {n:'Raidho',k:'viaje, ritmo, movimiento con propósito', g:'ᚱ'},
+ {n:'Kenaz',k:'conocimiento, luz interior, creatividad', g:'ᚲ'},
+ {n:'Gebo',k:'intercambio, regalo, equilibrio entre dar y recibir', g:'ᚷ'},
+ {n:'Wunjo',k:'alegría, armonía, recompensa merecida', g:'ᚹ'},
+ {n:'Hagalaz',k:'disrupción, fuerza natural, cambio inevitable', g:'ᚺ'},
+ {n:'Nauthiz',k:'necesidad, resistencia, lección forjada en dificultad', g:'ᚾ'},
+ {n:'Isa',k:'quietud, pausa, congelamiento temporal', g:'ᛁ'},
+ {n:'Jera',k:'cosecha, ciclo cumplido, resultado del esfuerzo', g:'ᛃ'},
+ {n:'Eihwaz',k:'resiliencia, conexión entre mundos, transformación', g:'ᛇ'},
+ {n:'Perthro',k:'destino, misterio, lo oculto que se revela', g:'ᛈ'},
+ {n:'Algiz',k:'protección, conexión superior, instinto de defensa', g:'ᛉ'},
+ {n:'Sowilo',k:'éxito, energía solar, claridad total', g:'ᛊ'},
+ {n:'Tiwaz',k:'justicia, honor, sacrificio con propósito', g:'ᛏ'},
+ {n:'Berkano',k:'nuevo crecimiento, fertilidad, cuidado', g:'ᛒ'},
+ {n:'Ehwaz',k:'avance conjunto, confianza, movimiento leal', g:'ᛖ'},
+ {n:'Mannaz',k:'humanidad, el yo social, cooperación', g:'ᛗ'},
+ {n:'Laguz',k:'flujo emocional, intuición, aguas profundas', g:'ᛚ'},
+ {n:'Ingwaz',k:'potencial acumulado, fertilidad interior, gestación', g:'ᛜ'},
+ {n:'Dagaz',k:'amanecer, avance decisivo, transformación positiva', g:'ᛞ'},
+ {n:'Othala',k:'herencia, hogar, valores heredados', g:'ᛟ'}
 ];
 const RUNE_MODES={
   single:{label:'Runa del día', count:1, positions:['Mensaje del día']},
@@ -901,7 +932,7 @@ document.getElementById('runeDrawBtn').addEventListener('click', ()=>{
     const r=RUNES[idx];
     const div=document.createElement('div'); div.className='tarot-card';
     div.innerHTML=`<div class="position-label">${mode.positions[i]}</div>
-      <div class="face"><span class="rune-glyph">ᚱ</span></div>
+      <div class="face"><span class="rune-glyph">${r.g}</span></div>
       <div class="cardname">${r.n}</div>
       <div class="cardmean">${r.k}</div>`;
     layout.appendChild(div);
@@ -962,7 +993,7 @@ document.getElementById('numBtn').addEventListener('click', ()=>{
     extra = `<div class="hairline"></div><div class="title">Carta que dialoga con tus números</div><p class="desc"><b>${d.card.name}</b> — ${d.reversed?d.card.rev:d.card.up}</p>`;
   } else if(numMode==='runas'){
     const idx=Math.floor(rng()*RUNES.length);
-    extra = `<div class="hairline"></div><div class="title">Runa que dialoga con tus números</div><p class="desc"><span class="rune-glyph">ᚱ</span> <b>${RUNES[idx].n}</b> — ${RUNES[idx].k}</p>`;
+    extra = `<div class="hairline"></div><div class="title">Runa que dialoga con tus números</div><p class="desc"><span class="rune-glyph">${RUNES[idx].g}</span> <b>${RUNES[idx].n}</b> — ${RUNES[idx].k}</p>`;
   }
   document.getElementById('numResult').style.display='block';
   document.getElementById('numResult').innerHTML = `
@@ -1125,7 +1156,7 @@ function renderFixedDraw(containerId, seedBase, count, positions){
   box.innerHTML = draws.map((d,i)=>`
     <div class="tarot-card${d.reversed?' reversed':''}">
       <div class="position-label">${positions[i]}</div>
-      <div class="face">𓂀</div>
+      ${cardFaceHTML(d.card)}
       <div class="cardname">${d.card.name}${d.reversed?' (inv.)':''}</div>
       <div class="cardmean">${d.reversed?d.card.rev:d.card.up}</div>
     </div>`).join('');
