@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mut Tarot · Astrología Egipcia, Tarot, Runas y Numerología</title>
+<meta name="description" content="Mut Tarot: astrología personalizada, cálculo de carta natal, tiradas de tarot con las 78 cartas, runas y numerología. Diseño egipcio ancestral. Consultas por WhatsApp.">
+<meta property="og:title" content="Mut Tarot · Sabiduría Egipcia para tu Camino">
+<meta property="og:description" content="Astrología personalizada, Tarot Raider, Runas y Numerología. Tu carta natal, tus tránsitos, tu destino.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%89%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<!-- ============ GOOGLE ANALYTICS 4 (opcional) ============
+  1. Crea una propiedad GA4 en https://analytics.google.com
+  2. Copia tu ID de medición (empieza por "G-")
+  3. Reemplaza G-XXXXXXXXXX en las DOS líneas de abajo y descomenta este bloque
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+-->
+
+<!-- ============ META (FACEBOOK/INSTAGRAM) PIXEL (opcional) ============
+  Como ya inviertes en Instagram/Facebook Ads (se ve en tu URL con utm_source=ig),
+  este píxel te dice qué anuncio realmente termina en un WhatsApp o email.
+  1. Crea un píxel en https://business.facebook.com/events_manager
+  2. Copia tu Pixel ID y reemplaza TU_PIXEL_ID abajo, luego descomenta
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'TU_PIXEL_ID');
+  fbq('track', 'PageView');
+</script>
+-->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Mut Tarot",
+  "description": "Astrología personalizada, tarot egipcio, runas y numerología.",
+  "telephone": "+34643129989",
+  "email": "muttarotev@gmail.com",
+  "priceRange": "$$"
+}
+</script>
+<style>
+:root{
+  --papyrus:#efe3c6;
+  --papyrus-deep:#e4d3a4;
+  --papyrus-panel:#f6ecd2;
+  --ink:#241a0f;
+  --ink-soft:#4a3a24;
+  --gold:#c9a227;
+  --gold-bright:#eec95e;
+  --gold-deep:#8a6a1e;
+  --clay:#a85c32;
+  --clay-deep:#7c4322;
+  --lapis:#1c4d55;
+  --lapis-deep:#123338;
+  --shadow:0 8px 24px rgba(36,26,15,.25);
+  --radius:2px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 15% 8%, rgba(201,162,39,.10), transparent 40%),
+    radial-gradient(circle at 85% 92%, rgba(28,77,85,.08), transparent 45%),
+    var(--papyrus);
+  color:var(--ink);
+  font-family:'Cormorant Garamond', serif;
+  font-size:19px;
+  line-height:1.55;
+}
+h1,h2,h3,h4{font-family:'Cinzel', serif; color:var(--ink); margin:0 0 .4em; letter-spacing:.03em;}
+.display{font-family:'Cinzel Decorative', serif;}
+a{color:var(--clay-deep);}
+img{max-width:100%;}
+.wrap{max-width:1180px; margin:0 auto; padding:0 24px;}
+.eyebrow{
+  font-family:'Cinzel',serif; font-size:.72rem; letter-spacing:.28em; text-transform:uppercase;
+  color:var(--gold-deep); display:flex; align-items:center; gap:.6em; margin-bottom:.6em;
+}
+.eyebrow::before, .eyebrow::after{content:""; flex:1; height:1px; background:linear-gradient(90deg, transparent, var(--gold), transparent);}
+.hairline{height:1px; background:linear-gradient(90deg, transparent, var(--gold-deep) 15%, var(--gold-bright) 50%, var(--gold-deep) 85%, transparent); margin:2.6rem 0;}
+
+/* --- cadeneta de texto decorativa (reemplaza los falsos "jeroglíficos") --- */
+.text-chain{
+  width:100%; overflow:hidden; background:var(--ink); border-top:1px solid var(--gold-deep); border-bottom:1px solid var(--gold-deep);
+  padding:10px 0;
+}
+.text-chain-track{
+  display:inline-block; white-space:nowrap; font-family:'Cinzel',serif; font-size:.72rem; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--gold-deep); animation:chainScroll 34s linear infinite;
+}
+@keyframes chainScroll{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+
+/* --- nav --- */
+header{
+  position:sticky; top:0; z-index:50;
+  background:linear-gradient(180deg, var(--ink) 0%, #2c2013 100%);
+  border-bottom:3px solid var(--gold);
+  box-shadow:var(--shadow);
+}
+.nav{display:flex; align-items:center; justify-content:space-between; padding:14px 24px; max-width:1180px; margin:0 auto;}
+.brand{display:flex; align-items:center; gap:12px; text-decoration:none;}
+.brand svg{width:34px; height:34px;}
+.brand-text{font-family:'Cinzel Decorative', serif; color:var(--gold-bright); font-size:1.35rem; letter-spacing:.06em;}
+.brand-text small{display:block; font-family:'Cinzel',serif; font-size:.5rem; letter-spacing:.32em; color:var(--papyrus-deep); text-transform:uppercase;}
+nav.links{display:flex; gap:28px; list-style:none; margin:0; padding:0;}
+nav.links a{
+  color:var(--papyrus); text-decoration:none; font-family:'Cinzel',serif; font-size:.78rem;
+  letter-spacing:.14em; text-transform:uppercase; padding:6px 2px; border-bottom:1px solid transparent;
+  transition:.2s;
+}
+nav.links a:hover{color:var(--gold-bright); border-color:var(--gold-bright);}
+.nav-cta{
+  display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:var(--ink);
+  padding:9px 16px; border-radius:var(--radius); font-family:'Cinzel',serif; font-size:.72rem;
+  letter-spacing:.12em; text-transform:uppercase; text-decoration:none; font-weight:600;
+  box-shadow:0 3px 0 var(--gold-deep);
+}
+.menu-toggle{display:none; background:none; border:1px solid var(--gold); color:var(--gold-bright); font-size:1.3rem; padding:4px 10px; cursor:pointer;}
+
+/* --- hero --- */
+.hero{
+  position:relative; overflow:hidden; padding:90px 24px 70px;
+  background:
+    linear-gradient(180deg, rgba(36,26,15,.86), rgba(36,26,15,.72)),
+    repeating-linear-gradient(135deg, var(--clay-deep) 0 2px, transparent 2px 40px),
+    var(--ink);
+  color:var(--papyrus); text-align:center;
+  border-bottom:6px double var(--gold);
+}
+.hero .wrap{position:relative; z-index:2;}
+.hero .eyebrow{justify-content:center; color:var(--gold-bright);}
+.hero .eyebrow::before,.hero .eyebrow::after{background:linear-gradient(90deg, transparent, var(--gold-bright), transparent);}
+.hero h1{
+  font-size:clamp(2.4rem, 6vw, 4.3rem); color:var(--gold-bright); margin:.2em 0 .3em;
+  text-shadow:0 2px 0 var(--gold-deep);
+}
+.hero p.lead{max-width:640px; margin:0 auto 2.2rem; font-size:1.25rem; color:var(--papyrus-deep); font-style:italic;}
+.hero-ctas{display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:2.6rem;}
+.btn{
+  font-family:'Cinzel',serif; font-size:.82rem; letter-spacing:.1em; text-transform:uppercase;
+  padding:14px 26px; border-radius:var(--radius); text-decoration:none; display:inline-flex;
+  align-items:center; gap:10px; cursor:pointer; border:1px solid transparent; transition:.2s transform;
+}
+.btn:hover{transform:translateY(-2px);}
+.btn-gold{background:var(--gold); color:var(--ink); box-shadow:0 4px 0 var(--gold-deep); font-weight:600;}
+.btn-outline{background:transparent; color:var(--gold-bright); border-color:var(--gold-bright);}
+.btn-whatsapp{background:#3f7a4f; color:#f5f5ee; box-shadow:0 4px 0 #2c5738;}
+
+/* --- Eye of Ra interactive --- */
+.eye-widget{max-width:420px; margin:0 auto; text-align:center;}
+.eye-btn{background:none; border:none; cursor:pointer; padding:0;}
+.eye-btn svg{width:150px; height:auto; filter:drop-shadow(0 4px 10px rgba(0,0,0,.5));}
+.eye-hint{font-family:'Cinzel',serif; font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; color:var(--papyrus-deep); margin-top:10px;}
+.eye-reveal{
+  margin-top:20px; background:rgba(239,227,198,.06); border:1px solid var(--gold-deep); border-radius:var(--radius);
+  padding:18px; display:none;
+}
+.eye-reveal.show{display:block; animation:fadein .5s ease;}
+.eye-reveal .card-name{color:var(--gold-bright); font-family:'Cinzel',serif; font-size:1.15rem;}
+.eye-reveal p{margin:.3em 0 0; color:var(--papyrus-deep); font-size:1rem;}
+@keyframes fadein{from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);}}
+
+/* --- sections generic --- */
+section{padding:78px 0;}
+.section-head{text-align:center; max-width:680px; margin:0 auto 3rem;}
+.section-head h2{font-size:clamp(1.9rem,3.4vw,2.6rem);}
+.section-head p{color:var(--ink-soft); font-size:1.1rem;}
+.alt-bg{background:var(--papyrus-panel); border-top:1px solid var(--gold-deep); border-bottom:1px solid var(--gold-deep);}
+
+.panel{
+  background:var(--papyrus-panel); border:1px solid var(--gold-deep); position:relative; padding:26px;
+  box-shadow:var(--shadow);
+}
+.panel::before{
+  content:""; position:absolute; inset:6px; border:1px solid var(--gold); pointer-events:none;
+}
+.grid{display:grid; gap:22px;}
+.grid-3{grid-template-columns:repeat(3,1fr);}
+.grid-4{grid-template-columns:repeat(4,1fr);}
+.grid-2{grid-template-columns:repeat(2,1fr);}
+@media(max-width:900px){.grid-3,.grid-4,.grid-2{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.grid-3,.grid-4,.grid-2{grid-template-columns:1fr;}}
+
+.feature-card{padding:24px; text-align:left;}
+.feature-card .icon{width:40px; height:40px; margin-bottom:12px; color:var(--clay-deep);}
+.feature-card h3{font-size:1.05rem; margin-bottom:.3em;}
+.feature-card p{font-size:.98rem; color:var(--ink-soft); margin:0;}
+
+/* --- tabs / selector --- */
+.tab-row{display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:28px;}
+.tab-btn{
+  font-family:'Cinzel',serif; font-size:.74rem; letter-spacing:.08em; text-transform:uppercase;
+  background:var(--papyrus-panel); border:1px solid var(--gold-deep); color:var(--ink-soft);
+  padding:10px 16px; cursor:pointer; border-radius:var(--radius);
+}
+.tab-btn.active{background:var(--gold); color:var(--ink); border-color:var(--gold-deep); font-weight:600;}
+
+.spread-info{text-align:center; max-width:640px; margin:0 auto 26px;}
+.spread-info h3{color:var(--clay-deep); font-size:1.2rem;}
+.spread-info p{color:var(--ink-soft); font-size:1rem;}
+
+.union-select{display:flex; justify-content:center; margin-bottom:22px;}
+.union-select select{
+  font-family:'Cinzel',serif; padding:10px 14px; border:1px solid var(--gold-deep); background:var(--papyrus-panel);
+  color:var(--ink); font-size:.85rem; letter-spacing:.04em;
+}
+
+.draw-btn-row{text-align:center; margin-bottom:34px;}
+.seed-input{
+  display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:18px;
+}
+.seed-input input{
+  font-family:'Cormorant Garamond',serif; font-size:1rem; padding:10px 14px; border:1px solid var(--gold-deep);
+  background:var(--papyrus-panel); min-width:230px;
+}
+.seed-note{font-size:.85rem; color:var(--ink-soft); text-align:center; max-width:520px; margin:0 auto 20px; font-style:italic;}
+
+.card-layout{display:flex; flex-wrap:wrap; gap:16px; justify-content:center;}
+.synthesis-box{
+  display:none; max-width:760px; margin:30px auto 0; background:var(--papyrus-panel);
+  border:1px solid var(--gold-deep); border-radius:var(--radius); padding:24px 26px; position:relative;
+}
+.synthesis-box.show{display:block; animation:fadein .5s ease;}
+.synthesis-box::before{content:""; position:absolute; inset:6px; border:1px solid var(--gold); pointer-events:none;}
+.synthesis-box .synthesis-title{
+  font-family:'Cinzel',serif; font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; color:var(--gold-deep);
+  text-align:center; margin-bottom:12px;
+}
+.synthesis-box p{color:var(--ink-soft); font-size:1.02rem; line-height:1.7; margin:0;}
+.synthesis-box b{color:var(--clay-deep);}
+.tarot-card{
+  width:126px; text-align:center; perspective:900px;
+}
+.tarot-card .position-label{font-family:'Cinzel',serif; font-size:.65rem; letter-spacing:.08em; text-transform:uppercase; color:var(--gold-deep); margin-bottom:6px; min-height:2.4em;}
+.tarot-card .face{
+  height:190px; background:linear-gradient(160deg, var(--lapis) 0%, var(--lapis-deep) 100%);
+  border:2px solid var(--gold); border-radius:8px; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  color:var(--gold-bright); font-family:'Cinzel Decorative',serif; font-size:1.8rem; box-shadow:var(--shadow);
+  cursor:default; position:relative; overflow:hidden;
+}
+.tarot-card .face img{
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; z-index:2;
+  filter:sepia(.12) saturate(1.05);
+}
+.tarot-card .face::before{
+  content:""; position:absolute; inset:5px; border:1px solid rgba(238,201,94,.55); border-radius:4px; pointer-events:none; z-index:3;
+}
+.face-symbol{font-size:2.6rem; line-height:1;}
+.face-suit{font-size:2.1rem; line-height:1;}
+.face-rank{font-family:'Cinzel',serif; font-size:.85rem; letter-spacing:.08em; text-transform:uppercase; margin-top:10px; color:var(--papyrus);}
+.face-fallback{display:flex; flex-direction:column; align-items:center; justify-content:center; z-index:1;}
+.tarot-card .cardname{margin-top:8px; font-family:'Cinzel',serif; font-size:.82rem; color:var(--ink);}
+.tarot-card .cardmean{font-size:.85rem; color:var(--ink-soft); margin-top:2px;}
+.tarot-card.reversed .face{transform:rotate(180deg);}
+
+.today-activation{
+  max-width:640px; margin:0 auto 30px; text-align:center; background:var(--papyrus-panel);
+  border:1px dashed var(--gold-deep); padding:16px 20px; font-size:.95rem; color:var(--ink-soft);
+}
+.today-activation b{color:var(--clay-deep);}
+
+/* --- astro form --- */
+.astro-form{max-width:640px; margin:0 auto 20px;}
+.astro-form .row{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:14px;}
+.astro-form label{display:block; font-family:'Cinzel',serif; font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color:var(--gold-deep); margin-bottom:6px;}
+.astro-form input{
+  width:100%; font-family:'Cormorant Garamond',serif; font-size:1.05rem; padding:10px 12px;
+  border:1px solid var(--gold-deep); background:var(--papyrus-panel);
+}
+.astro-form .field{flex:1; min-width:150px;}
+.astro-results{display:none; margin-top:26px;}
+.astro-results.show{display:block; animation:fadein .5s ease;}
+.astro-result-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; margin-top:18px;}
+.astro-result-card{background:var(--papyrus-panel); border:1px solid var(--gold-deep); padding:16px; text-align:center;}
+.astro-result-card .label{font-family:'Cinzel',serif; font-size:.66rem; letter-spacing:.1em; text-transform:uppercase; color:var(--gold-deep);}
+.astro-result-card .value{font-family:'Cinzel',serif; font-size:1.15rem; margin-top:6px; color:var(--clay-deep);}
+.disclaimer{font-size:.85rem; color:var(--ink-soft); font-style:italic; text-align:center; margin-top:16px;}
+
+/* --- selector de país / autocompletar ciudad --- */
+.astro-form select{
+  width:100%; font-family:'Cormorant Garamond',serif; font-size:1.05rem; padding:10px 12px;
+  border:1px solid var(--gold-deep); background:var(--papyrus-panel); color:var(--ink);
+}
+.city-suggestions{
+  position:absolute; top:100%; left:0; right:0; z-index:20; background:var(--papyrus-panel);
+  border:1px solid var(--gold-deep); border-top:none; max-height:220px; overflow-y:auto; display:none;
+}
+.city-suggestions.show{display:block;}
+.city-suggestion-item{padding:10px 12px; font-size:.92rem; color:var(--ink-soft); cursor:pointer; border-bottom:1px solid var(--papyrus-deep);}
+.city-suggestion-item:hover, .city-suggestion-item.active{background:var(--gold); color:var(--ink);}
+.city-suggestion-loading, .city-suggestion-empty{padding:10px 12px; font-size:.85rem; color:var(--ink-soft); font-style:italic;}
+.city-selected-note{font-size:.85rem; color:var(--clay-deep); text-align:center; margin:-6px 0 4px; min-height:1.2em;}
+.toggle-manual{font-size:.8rem; color:var(--gold-deep); text-align:center; text-decoration:underline; cursor:pointer; margin:4px 0 10px;}
+
+.retro-table{width:100%; border-collapse:collapse; margin-top:10px; font-size:.95rem;}
+.retro-table th,.retro-table td{border:1px solid var(--gold-deep); padding:9px 10px; text-align:left;}
+.retro-table th{background:var(--gold); color:var(--ink); font-family:'Cinzel',serif; font-size:.72rem; letter-spacing:.06em; text-transform:uppercase;}
+.retro-table tr.active-now{background:rgba(168,92,50,.15); font-weight:600;}
+.moon-widget{display:flex; align-items:center; gap:16px; justify-content:center; margin-top:6px;}
+.moon-widget .moon-emoji{font-size:2.6rem;}
+
+/* --- runes / numerology result box --- */
+.result-box{background:var(--papyrus-panel); border:1px solid var(--gold-deep); padding:22px; margin-top:22px; text-align:center;}
+.result-box .title{font-family:'Cinzel',serif; color:var(--clay-deep); font-size:1.3rem;}
+.result-box .desc{color:var(--ink-soft); margin-top:8px;}
+.rune-glyph{font-size:2.6rem; color:var(--lapis); font-family:'Cinzel Decorative',serif;}
+
+/* --- pricing / services grid for premium astrology --- */
+.service-card{padding:22px; text-align:center;}
+.service-card .icon{font-size:1.8rem; margin-bottom:10px;}
+.service-card h4{font-size:1rem; margin-bottom:.3em; color:var(--clay-deep);}
+.service-card p{font-size:.92rem; color:var(--ink-soft);}
+
+/* --- testimonials --- */
+.testimonial-card{text-align:center;}
+.stars{color:var(--gold); font-size:1.1rem; letter-spacing:2px; margin-bottom:12px;}
+.testimonial-text{color:var(--ink-soft); font-style:italic; font-size:1rem; line-height:1.5;}
+.testimonial-name{margin-top:14px; font-family:'Cinzel',serif; font-size:.8rem; color:var(--clay-deep); letter-spacing:.05em;}
+
+/* --- pricing --- */
+.price-row{display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin:26px 0 6px;}
+.price-card{background:rgba(239,227,198,.06); border:1px solid var(--gold-deep); border-radius:var(--radius); padding:16px 22px; min-width:150px;}
+.price-title{font-family:'Cinzel',serif; font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--papyrus-deep);}
+.price-amount{font-family:'Cinzel',serif; font-size:1.2rem; color:var(--gold-bright); margin-top:6px;}
+
+/* --- contact --- */
+.contact{
+  background:linear-gradient(180deg, var(--ink), #2c2013); color:var(--papyrus); text-align:center; border-top:6px double var(--gold);
+}
+.contact h2{color:var(--gold-bright);}
+.contact p{color:var(--papyrus-deep); max-width:520px; margin:0 auto 2rem;}
+.contact-row{display:flex; gap:18px; justify-content:center; flex-wrap:wrap;}
+
+footer{background:var(--ink); color:var(--papyrus-deep); text-align:center; padding:26px; font-size:.85rem;}
+footer a{color:var(--gold-bright); text-decoration:none;}
+
+.whatsapp-float{
+  position:fixed; bottom:22px; right:22px; z-index:60; background:#3f7a4f; color:#fff; width:58px; height:58px;
+  border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 16px rgba(0,0,0,.35);
+  text-decoration:none; border:2px solid var(--gold-bright);
+}
+.whatsapp-float svg{width:28px; height:28px;}
+
+@media(max-width:860px){
+  nav.links, .nav-cta{display:none;}
+  .menu-toggle{display:block;}
+  nav.links.open{
+    display:flex; position:absolute; top:100%; left:0; right:0; background:var(--ink); flex-direction:column;
+    padding:16px 24px; gap:14px; border-bottom:2px solid var(--gold);
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#inicio" class="brand">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="18" r="10" stroke="#eec95e" stroke-width="2.5"/><path d="M32 28 V56 M20 38 H44" stroke="#eec95e" stroke-width="2.5"/></svg>
+      <span class="brand-text">Mut Tarot<small>Sabiduría Egipcia</small></span>
+    </a>
+    <ul class="links" id="navLinks">
+      <li><a href="#tarot">Tarot</a></li>
+      <li><a href="#astrologia">Astrología</a></li>
+      <li><a href="#runas">Runas</a></li>
+      <li><a href="#numerologia">Numerología</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a class="nav-cta" href="https://wa.me/34643129989?text=Hola%20Mut%20Tarot%2C%20quiero%20una%20consulta" target="_blank" rel="noopener" onclick="trackContact('whatsapp_nav')">Reservar</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div class="eyebrow">Astrología · Tarot · Runas · Numerología</div>
+    <h1 class="display">Mut Tarot</h1>
+    <p class="lead">La diosa del cielo estrellado guarda tu destino en las cartas, los astros y los símbolos antiguos. Descubre tu carta natal, tu tirada del día y el mensaje que Egipto tiene para ti.</p>
+    <div class="hero-ctas">
+      <a href="#tarot" class="btn btn-gold">Hacer una tirada</a>
+      <a href="#astrologia" class="btn btn-outline">Mi carta natal</a>
+      <a href="https://wa.me/34643129989?text=Hola%20Mut%20Tarot%2C%20quiero%20una%20consulta" target="_blank" rel="noopener" class="btn btn-whatsapp" onclick="trackContact('whatsapp_hero')">WhatsApp directo</a>
+    </div>
+
+    <div class="eye-widget">
+      <button class="eye-btn" id="eyeBtn" aria-label="Revelar carta del día">
+        <svg viewBox="0 0 420 340" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="eyeGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#f2cb5c"/>
+              <stop offset="100%" stop-color="#b8891f"/>
+            </linearGradient>
+            <radialGradient id="eyePupilGrad" cx="35%" cy="35%" r="70%">
+              <stop offset="0%" stop-color="#2d6b78"/>
+              <stop offset="100%" stop-color="#123338"/>
+            </radialGradient>
+          </defs>
+          <!-- ceja: banda que se afina hacia la derecha -->
+          <path d="M25,148 C42,85 120,50 210,50 C282,50 335,70 385,100 C388,103 386,108 382,107
+                   C332,80 280,63 210,63 C130,63 60,95 44,156 C41,164 22,158 25,148 Z" fill="url(#eyeGoldGrad)"/>
+          <!-- ojo almendrado -->
+          <path d="M42,192 C108,138 180,116 238,116 C290,116 330,140 366,170
+                   C330,200 288,220 238,220 C180,220 108,198 42,192 Z" fill="#f4ecd8" stroke="url(#eyeGoldGrad)" stroke-width="6"/>
+          <!-- pupila -->
+          <circle cx="238" cy="180" r="47" fill="url(#eyePupilGrad)" stroke="url(#eyeGoldGrad)" stroke-width="6"/>
+          <circle cx="222" cy="165" r="12" fill="#eec95e" opacity=".75"/>
+          <!-- marca recta bajo el ojo (lágrima) -->
+          <path d="M195,215 C193,248 189,272 180,296 C188,299 197,295 201,286
+                   C209,262 211,238 208,215 Z" fill="url(#eyeGoldGrad)"/>
+          <!-- cola en espiral, nace pegada a la esquina externa del ojo -->
+          <path d="M366,170 C368,172 370,174 372,177 C394,188 408,206 409,228 C410,248 398,263 379,265
+                   C363,267 350,257 349,243 C348,233 356,225 365,227 C372,228 376,235 373,241"
+                fill="none" stroke="url(#eyeGoldGrad)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="eye-hint">Toca el Ojo de Horus · Carta del día</div>
+      <div class="eye-reveal" id="eyeReveal">
+        <div class="card-name" id="eyeCardName"></div>
+        <p id="eyeCardMeaning"></p>
+        <p id="eyeCardPlanet" style="font-size:.85rem;"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="text-chain" aria-hidden="true"><div class="text-chain-track">MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · </div></div>
+
+<!-- ================= FEATURES OVERVIEW ================= -->
+<section id="explora">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Lo que encontrarás aquí</div>
+      <h2>Cuatro caminos, una sola sabiduría</h2>
+      <p>Cada sistema tiene su propia voz. Combínalos o sigue uno solo: el objetivo es el mismo, darte claridad.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="panel feature-card">
+        <div class="icon">☥</div>
+        <h3>Astrología Personalizada</h3>
+        <p>Carta natal, tránsitos en tiempo real, retrogradaciones, sinastría y astrocartografía.</p>
+      </div>
+      <div class="panel feature-card">
+        <div class="icon">❂</div>
+        <h3>Tarot Raider</h3>
+        <p>Las 78 cartas, seis tiradas rituales y un algoritmo que activa cartas según el tránsito planetario del día.</p>
+      </div>
+      <div class="panel feature-card">
+        <div class="icon">ᚱ</div>
+        <h3>Runas</h3>
+        <p>Los 24 símbolos del Futhark Antiguo, en tiradas puras o combinadas con tarot y numerología.</p>
+      </div>
+      <div class="panel feature-card">
+        <div class="icon">Ⅸ</div>
+        <h3>Numerología</h3>
+        <p>Tu número de camino de vida y tu número de destino, cruzados con las cartas y las runas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TAROT ================= -->
+<section id="tarot" class="alt-bg">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Tarot Raider · 78 cartas</div>
+      <h2>Elige tu tirada</h2>
+      <p>Cada tirada tiene forma propia — un laberinto, una cruz de vida eterna, una estrella de siete puntas. El mazo completo de 78 arcanos responde a tu pregunta.</p>
+    </div>
+
+    <div class="today-activation" id="activationBox"></div>
+
+    <div class="seed-input">
+      <input type="text" id="seedInput" placeholder="Tu nombre o fecha de nacimiento (semilla, opcional)">
+    </div>
+    <p class="seed-note">La semilla personaliza el orden del mazo antes de cada tirada: la misma semilla, el mismo día, siempre revela el mismo mensaje.</p>
+
+    <div class="tab-row" id="spreadTabs"></div>
+    <div class="union-select" id="unionSelectWrap" style="display:none;">
+      <select id="unionCategory">
+        <option value="dinero">Dinero y Abundancia</option>
+        <option value="viajes">Viajes</option>
+        <option value="empleo">Cambio de Empleo</option>
+        <option value="amor">Relación Amorosa</option>
+        <option value="relocalizacion">Relocalización</option>
+      </select>
+    </div>
+    <div class="spread-info" id="spreadInfo"></div>
+    <div class="draw-btn-row"><button class="btn btn-gold" id="drawBtn">Barajar y tirar</button></div>
+    <div class="card-layout" id="cardLayout"></div>
+    <div class="synthesis-box" id="synthesisBox"></div>
+
+    <div class="hairline"></div>
+
+    <div class="section-head">
+      <div class="eyebrow">Pronósticos periódicos</div>
+      <h2>Tirada de la Semana y del Mes</h2>
+      <p>Una carta única para toda la semana, y un panorama de tres cartas para todo el mes. El resultado es el mismo hasta que cambie el periodo — como un horóscopo, pero de tarot.</p>
+    </div>
+    <div class="grid grid-2">
+      <div class="panel" style="text-align:center;">
+        <h3>🗓️ Tirada de la Semana</h3>
+        <p style="color:var(--ink-soft); font-size:.95rem; margin-bottom:16px;">Una carta que acompaña toda la semana actual.</p>
+        <div id="weekCardBox" class="card-layout" style="margin-bottom:14px;"></div>
+        <button class="btn btn-outline" id="weekDrawBtn" style="border-color:var(--clay-deep); color:var(--clay-deep);">Ver mi carta de la semana</button>
+      </div>
+      <div class="panel" style="text-align:center;">
+        <h3>🌕 Tirada del Mes</h3>
+        <p style="color:var(--ink-soft); font-size:.95rem; margin-bottom:16px;">Energía general, desafío y consejo para todo el mes.</p>
+        <div id="monthCardBox" class="card-layout" style="margin-bottom:14px;"></div>
+        <button class="btn btn-outline" id="monthDrawBtn" style="border-color:var(--clay-deep); color:var(--clay-deep);">Ver mi tirada del mes</button>
+        <div class="synthesis-box" id="monthSynthesisBox" style="margin-top:18px; text-align:left;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="text-chain" aria-hidden="true"><div class="text-chain-track">MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · </div></div>
+
+<!-- ================= HOROSCOPO SEMANAL ================= -->
+<section id="horoscopo" class="alt-bg">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Actualizado cada semana</div>
+      <h2>Horóscopo semanal por signo</h2>
+      <p>Elige tu signo solar y descubre la energía de esta semana. Se actualiza todas las semanas — vuelve a consultarlo.</p>
+    </div>
+    <div class="union-select">
+      <select id="horoscopeSign"></select>
+    </div>
+    <div class="result-box" id="horoscopeResult" style="max-width:640px; margin:0 auto;"></div>
+    <p class="disclaimer" style="margin-top:20px;">Última actualización de esta semana: <span id="horoscopeWeekLabel"></span>. ¿Quieres tu horóscopo personalizado con tu carta natal completa? <a href="#contacto">Escríbeme</a>.</p>
+  </div>
+</section>
+
+<!-- ================= ASTROLOGIA ================= -->
+<section id="astrologia">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Astrología Personalizada</div>
+      <h2>Tu carta natal, en vista previa</h2>
+      <p>Introduce tus datos de nacimiento para una lectura orientativa gratuita de Sol, Luna y Ascendente. Tu informe profesional completo (Placidus, nodos, Quirón, sinastría, astrocartografía) se elabora a mano en consulta.</p>
+    </div>
+
+    <div class="astro-form panel">
+      <div class="row">
+        <div class="field"><label>Fecha de nacimiento</label><input type="date" id="birthDate"></div>
+        <div class="field"><label>Hora de nacimiento</label><input type="time" id="birthTime" value="12:00"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label>País de nacimiento</label>
+          <select id="birthCountry"></select>
+        </div>
+        <div class="field" style="position:relative;">
+          <label>Ciudad / localidad de nacimiento</label>
+          <input type="text" id="birthCity" placeholder="Empieza a escribir el nombre de tu ciudad..." autocomplete="off">
+          <div id="citySuggestions" class="city-suggestions"></div>
+        </div>
+      </div>
+      <p id="citySelectedNote" class="city-selected-note"></p>
+      <p class="toggle-manual" id="toggleManualCoords">¿No aparece tu ciudad? Escribe las coordenadas manualmente</p>
+      <div class="row manual-coords" id="manualCoordsRow" style="display:none;">
+        <div class="field"><label>Latitud</label><input type="number" step="0.0001" id="birthLat" placeholder="ej. 40.4168"></div>
+        <div class="field"><label>Longitud</label><input type="number" step="0.0001" id="birthLon" placeholder="ej. -3.7038"></div>
+      </div>
+      <div class="draw-btn-row"><button class="btn btn-gold" id="natalBtn">Calcular carta natal (vista previa)</button></div>
+
+      <div class="astro-results" id="astroResults">
+        <div class="astro-result-grid">
+          <div class="astro-result-card"><div class="label">Sol</div><div class="value" id="resSun"></div></div>
+          <div class="astro-result-card"><div class="label">Luna (aprox.)</div><div class="value" id="resMoon"></div></div>
+          <div class="astro-result-card"><div class="label">Ascendente (aprox.)</div><div class="value" id="resAsc"></div></div>
+          <div class="astro-result-card"><div class="label">Fase lunar al nacer</div><div class="value" id="resMoonPhase"></div></div>
+        </div>
+        <p class="disclaimer">Cálculo simplificado con fines orientativos. Para tu informe astrológico completo con casas Placidus, retrogradaciones exactas, nodos lunares, Parte de Fortuna, Quirón, sinastría de 6 ejes y astrocartografía, escríbenos por WhatsApp.</p>
+      </div>
+    </div>
+
+    <div class="hairline"></div>
+
+    <div class="grid grid-2" style="margin-bottom:40px;">
+      <div class="panel">
+        <h3>🌙 Calendario Lunar de hoy</h3>
+        <div class="moon-widget">
+          <div class="moon-emoji" id="todayMoonEmoji">🌕</div>
+          <div>
+            <div style="font-family:'Cinzel',serif; color:var(--clay-deep);" id="todayMoonName"></div>
+            <div style="font-size:.9rem; color:var(--ink-soft);" id="todayMoonDate"></div>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>↻ Retrógrados activos ahora</h3>
+        <div id="activeRetro" style="font-size:.98rem; color:var(--ink-soft);"></div>
+      </div>
+    </div>
+
+    <h3 style="text-align:center;">Calendario de Retrogradaciones 2026</h3>
+    <table class="retro-table" id="retroTable">
+      <thead><tr><th>Planeta</th><th>Periodo retrógrado</th><th>Signo</th></tr></thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="hairline"></div>
+
+    <div class="section-head">
+      <div class="eyebrow">Consulta profesional</div>
+      <h2>Astrología de precisión</h2>
+      <p>Lo que Mut calcula a mano, con efemérides completas, para tu informe personalizado.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="panel service-card"><div class="icon">🪐</div><h4>Carta Natal Placidus</h4><p>Casas exactas con sistema Placidus, ángulos y regencias.</p></div>
+      <div class="panel service-card"><div class="icon">☊</div><h4>Nodos Lunares y Parte de Fortuna</h4><p>Tu propósito kármico y tu punto de mayor dicha natal.</p></div>
+      <div class="panel service-card"><div class="icon">⚷</div><h4>Quirón</h4><p>La herida que se convierte en don, ubicada en tu carta.</p></div>
+      <div class="panel service-card"><div class="icon">♡</div><h4>Sinastría 6 ejes</h4><p>Compatibilidad completa entre dos cartas natales.</p></div>
+      <div class="panel service-card"><div class="icon">🗺️</div><h4>Astrocartografía</h4><p>Los lugares del mundo donde tus planetas se activan distinto.</p></div>
+      <div class="panel service-card"><div class="icon">🔄</div><h4>Tránsitos en tiempo real</h4><p>Activación de cartas del tarot según el cielo de hoy.</p></div>
+      <div class="panel service-card"><div class="icon">🌘</div><h4>Retrogradaciones</h4><p>Qué planeta revisa qué área de tu vida, y cuándo.</p></div>
+      <div class="panel service-card"><div class="icon">📜</div><h4>Efemérides completas</h4><p>Posiciones planetarias exactas para cualquier fecha.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="text-chain" aria-hidden="true"><div class="text-chain-track">MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · </div></div>
+
+<!-- ================= RUNAS ================= -->
+<section id="runas" class="alt-bg">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Futhark Antiguo</div>
+      <h2>Runas: la voz de la piedra</h2>
+      <p>24 símbolos nórdicos que, combinados con tarot y numerología, abren nuevas capas de lectura.</p>
+    </div>
+    <div class="tab-row" id="runeTabs"></div>
+    <div class="draw-btn-row"><button class="btn btn-gold" id="runeDrawBtn">Lanzar runas</button></div>
+    <div class="card-layout" id="runeLayout"></div>
+  </div>
+</section>
+
+<!-- ================= NUMEROLOGIA ================= -->
+<section id="numerologia">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Numerología</div>
+      <h2>Los números de tu nombre y tu fecha</h2>
+      <p>Tu Número de Camino de Vida y tu Número de Destino, con posibilidad de mezcla con tarot y runas.</p>
+    </div>
+    <div class="astro-form panel" style="max-width:560px;">
+      <div class="row">
+        <div class="field"><label>Nombre completo</label><input type="text" id="numName" placeholder="Como aparece en tu certificado de nacimiento"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label>Fecha de nacimiento</label><input type="date" id="numDate"></div>
+      </div>
+      <div class="tab-row" style="margin-bottom:0;">
+        <button class="tab-btn active" data-nummode="solo">Solo Numerología</button>
+        <button class="tab-btn" data-nummode="tarot">+ Tarot</button>
+        <button class="tab-btn" data-nummode="runas">+ Runas</button>
+      </div>
+      <div class="draw-btn-row"><button class="btn btn-gold" id="numBtn">Calcular</button></div>
+      <div class="result-box" id="numResult" style="display:none;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIOS ================= -->
+<section id="testimonios">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Lo que dicen quienes ya consultaron</div>
+      <h2>Voces de la comunidad</h2>
+      <p>Edita estos testimonios con tus propias reseñas reales — son el factor que más ayuda a que alguien nuevo se anime a escribirte.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="panel testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"La tirada de la Cruz Celta me dio una claridad que no esperaba. Mut explica cada carta con mucha calma."</p>
+        <div class="testimonial-name">— Laura M.</div>
+      </div>
+      <div class="panel testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Mi carta natal me la explicó por videollamada y contestó todas mis dudas sobre mi Ascendente."</p>
+        <div class="testimonial-name">— Carlos R.</div>
+      </div>
+      <div class="panel testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Pedí la Tirada de la Unión para un cambio de trabajo y acerté justo lo que necesitaba escuchar."</p>
+        <div class="testimonial-name">— Andrea P.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="text-chain" aria-hidden="true"><div class="text-chain-track">MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · MUT TAROT · SABIDURÍA ANCESTRAL · </div></div>
+
+<!-- ================= CONTACTO ================= -->
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <div class="eyebrow">Escríbeme</div>
+    <h2 class="display">Consulta con Mut</h2>
+    <p>Reserva tu lectura personalizada de tarot, astrología, runas o numerología. Respondo por WhatsApp o correo.</p>
+
+    <div class="price-row">
+      <div class="price-card">
+        <div class="price-title">Consulta de 30 minutos</div>
+        <div class="price-amount">30€</div>
+      </div>
+      <div class="price-card">
+        <div class="price-title">Consulta de 1 hora</div>
+        <div class="price-amount">60€</div>
+      </div>
+    </div>
+    <p style="font-size:.85rem; color:var(--papyrus-deep); margin-top:-10px;">Tarot, astrología, runas o numerología — el mismo precio por duración, elige el tema que necesites.</p>
+
+    <div class="contact-row">
+      <a class="btn btn-whatsapp" href="https://wa.me/34643129989?text=Hola%20Mut%20Tarot%2C%20quiero%20una%20consulta" target="_blank" rel="noopener" onclick="trackContact('whatsapp_contact')">
+        WhatsApp +34 643 12 99 89
+      </a>
+      <a class="btn btn-outline" href="tel:+34643129989" onclick="trackContact('call')">Llamar ahora</a>
+      <a class="btn btn-outline" href="mailto:muttarotev@gmail.com" onclick="trackContact('email')">muttarotev@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Mut Tarot · Astrología, Tarot, Runas y Numerología con alma egipcia. ·
+  <a href="https://wa.me/34643129989">WhatsApp</a> · <a href="mailto:muttarotev@gmail.com">Correo</a> ·
+  <a href="privacidad.html">Privacidad</a>
+  <p style="max-width:640px; margin:14px auto 0; font-size:.78rem; color:#8a7a5c; line-height:1.5;">
+    Aviso: las lecturas de tarot, astrología, runas y numerología ofrecidas en esta web tienen fines de entretenimiento y autoconocimiento. No sustituyen asesoría médica, psicológica, legal o financiera profesional.
+  </p>
+  <p style="max-width:640px; margin:8px auto 0; font-size:.72rem; color:#6b5c40;">
+    Ilustraciones del Tarot Rider-Waite-Smith (1909, Pamela Colman Smith) — obra de dominio público, vía Wikimedia Commons. Geocodificación de ciudades vía OpenStreetMap Nominatim, © colaboradores de OpenStreetMap.
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/34643129989?text=Hola%20Mut%20Tarot%2C%20quiero%20una%20consulta" target="_blank" rel="noopener" aria-label="WhatsApp" onclick="trackContact('whatsapp_float')">
+  <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.71 4.61 1.929 6.474L4 29l7.706-1.902A11.94 11.94 0 0 0 16.001 27C22.629 27 28 21.627 28 15S22.629 3 16.001 3zm6.418 16.925c-.271.762-1.34 1.398-2.198 1.581-.586.124-1.35.223-3.922-.842-3.293-1.363-5.412-4.706-5.577-4.923-.159-.217-1.335-1.777-1.335-3.389 0-1.612.847-2.404 1.147-2.734.3-.33.654-.412.872-.412.218 0 .436.002.626.011.2.01.469-.076.734.561.271.653.921 2.265.999 2.43.079.166.132.36.026.577-.106.217-.159.35-.318.539-.16.19-.335.424-.478.57-.159.16-.325.334-.14.654.185.32.822 1.36 1.766 2.203 1.213 1.084 2.236 1.42 2.556 1.58.32.16.505.133.69-.08.185-.213.795-.926.998-1.245.204-.32.408-.266.688-.16.28.106 1.776.838 2.081.99.304.152.507.228.581.356.074.128.074.741-.197 1.503z"/></svg>
+</a>
+
+<script>
+/* ============ NAV MOBILE ============ */
+document.getElementById('menuToggle').addEventListener('click', function(){
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+/* ============ TAROT DECK DATA ============ */
+const MAJOR = [
+ {n:'El Loco', up:'Representa el inicio de un ciclo guiado por la confianza y la espontaneidad. Invita a dar el primer paso sin tener todas las respuestas, confiando en el proceso más que en el control.', rev:'Señala imprudencia o un salto dado sin la preparación necesaria. También puede indicar miedo a comenzar, dudas que frenan una decisión que ya está madura.', sym:'✦', img:'9/90/RWS_Tarot_00_Fool.jpg'},
+ {n:'El Mago', up:'Simboliza la capacidad de transformar una idea en realidad mediante la voluntad, el enfoque y las herramientas ya disponibles. Es momento de actuar con determinación sobre lo que ya se sabe hacer.', rev:'Advierte sobre el uso manipulador del propio talento o sobre un potencial que no se está aprovechando. Puede señalar dispersión, falta de enfoque o promesas vacías.', planet:'Mercurio', sym:'☿', img:'d/de/RWS_Tarot_01_Magician.jpg'},
+ {n:'La Sacerdotisa', up:'Habla de una sabiduría que no se busca fuera sino que se escucha en el silencio interior. Invita a confiar en la intuición antes de actuar y a respetar lo que aún no es momento de revelar.', rev:'Indica desconexión con la propia voz interior, secretos que generan malestar o una intuición que se ha estado ignorando por demasiado tiempo.', sym:'☽', img:'8/88/RWS_Tarot_02_High_Priestess.jpg'},
+ {n:'La Emperatriz', up:'Representa abundancia, fertilidad y la capacidad de crear y nutrir con generosidad, ya sea un proyecto, una relación o un aspecto de la propia vida. El placer y el disfrute sensorial aparecen con fuerza.', rev:'Puede señalar bloqueo creativo, dependencia emocional o una relación con el propio cuerpo y el autocuidado que necesita atención.', planet:'Venus', sym:'♀', img:'d/d2/RWS_Tarot_03_Empress.jpg'},
+ {n:'El Emperador', up:'Simboliza la estructura, la autoridad y la capacidad de sostener lo construido con firmeza y visión a largo plazo. Es una energía de liderazgo racional y disciplina.', rev:'Advierte sobre rigidez excesiva, autoritarismo o el uso indebido del poder, propio o ajeno. También puede reflejar falta de estructura donde se necesita.', sym:'♜', img:'c/c3/RWS_Tarot_04_Emperor.jpg'},
+ {n:'El Hierofante', up:'Representa la tradición, la guía espiritual y el aprendizaje a través de sistemas ya establecidos, ya sea una institución, un mentor o una filosofía de vida.', rev:'Señala rebeldía frente a lo convencional, o el momento de cuestionar creencias heredadas que ya no representan a quien las sostiene.', sym:'☩', img:'8/8d/RWS_Tarot_05_Hierophant.jpg'},
+ {n:'Los Enamorados', up:'Habla de una unión significativa y de decisiones tomadas desde la coherencia entre lo que se siente y lo que se valora. Representa alineación, no solo entre dos personas sino entre el ser y sus propias elecciones.', rev:'Indica un desequilibrio en una relación importante o una decisión pendiente que se ha estado postergando por miedo a elegir.', sym:'♡', img:'3/3a/TheLovers.jpg'},
+ {n:'El Carro', up:'Simboliza la determinación para avanzar a pesar de las fuerzas opuestas, manteniendo el rumbo mediante la voluntad y el autocontrol. Es una carta de victoria conseguida con esfuerzo dirigido.', rev:'Advierte sobre falta de dirección, agresividad mal canalizada o un avance que se ha vuelto errático por falta de un objetivo claro.', sym:'▶', img:'9/9b/RWS_Tarot_07_Chariot.jpg'},
+ {n:'La Fuerza', up:'Representa el coraje que nace de la calma, no de la imposición: la capacidad de dominar los propios impulsos con paciencia y compasión, incluso hacia uno mismo.', rev:'Puede señalar duda sobre la propia capacidad, o una energía que se expresa de forma descontrolada por falta de una canalización adecuada.', sym:'∞', img:'f/f5/RWS_Tarot_08_Strength.jpg'},
+ {n:'El Ermitaño', up:'Invita a la introspección y a la búsqueda de respuestas en el silencio, alejándose momentáneamente del ruido externo. Es una guía que se encuentra hacia adentro, no en la validación ajena.', rev:'Indica aislamiento excesivo, o la negación de una verdad interna que se sigue evitando por comodidad o miedo.', sym:'✧', img:'4/4d/RWS_Tarot_09_Hermit.jpg'},
+ {n:'La Rueda de la Fortuna', up:'Simboliza los ciclos inevitables de la vida y un giro favorable que llega casi como una fuerza externa. Recuerda que ningún estado, bueno o malo, es permanente.', rev:'Puede señalar resistencia al cambio natural de los ciclos, o una racha de circunstancias adversas que exige paciencia antes de que el ciclo gire de nuevo.', planet:'Júpiter', sym:'☸', img:'3/3c/RWS_Tarot_10_Wheel_of_Fortune.jpg'},
+ {n:'La Justicia', up:'Representa el equilibrio entre causa y efecto: las decisiones tomadas con honestidad producen resultados justos. Invita a mirar una situación con objetividad antes de actuar.', rev:'Advierte sobre una injusticia no resuelta, una decisión evasiva, o consecuencias que se han estado postergando y ya no se pueden evitar.', sym:'⚖', img:'e/e0/RWS_Tarot_11_Justice.jpg'},
+ {n:'El Colgado', up:'Simboliza la rendición consciente: soltar el control para ganar una perspectiva distinta. No es estancamiento, sino una pausa necesaria antes de un cambio de enfoque.', rev:'Puede indicar un sacrificio que no está dando frutos, o resistencia a soltar algo que ya cumplió su función.', sym:'↓', img:'2/2b/RWS_Tarot_12_Hanged_Man.jpg'},
+ {n:'La Muerte', up:'Representa el cierre definitivo de un ciclo para dar paso a algo nuevo. No suele referirse a una muerte física, sino a una transformación profunda que ya es inevitable.', rev:'Señala resistencia a un cambio necesario, o un proceso de transformación que se ha estancado por miedo a soltar lo conocido.', sym:'☠', img:'d/d7/RWS_Tarot_13_Death.jpg'},
+ {n:'La Templanza', up:'Simboliza la integración de opuestos: paciencia, mesura y la alquimia de combinar distintas partes de la vida en una fórmula equilibrada. Invita a moderar los extremos.', rev:'Advierte sobre excesos, desequilibrio o la falta de paciencia necesaria para que un proceso madure a su propio ritmo.', sym:'⚗', img:'f/f8/RWS_Tarot_14_Temperance.jpg'},
+ {n:'El Diablo', up:'Representa las ataduras que uno mismo sostiene: patrones, deseos o dependencias que limitan la libertad, aunque a veces resulten cómodas. Invita a observar la propia sombra sin juzgarla.', rev:'Puede señalar el inicio de una liberación real de esas cadenas, o la toma de conciencia de un patrón que ya no se quiere repetir.', sym:'⛓', img:'5/55/RWS_Tarot_15_Devil.jpg'},
+ {n:'La Torre', up:'Simboliza una ruptura súbita que desmantela estructuras que ya no eran sólidas, aunque lo parecieran. Es incómoda, pero revela una verdad que no se podía seguir ignorando.', rev:'Puede indicar que una crisis mayor se evitó a tiempo, o que un cambio necesario se sigue posponiendo aunque las grietas ya sean visibles.', planet:'Marte', sym:'⚡', img:'5/53/RWS_Tarot_16_Tower.jpg'},
+ {n:'La Estrella', up:'Representa la esperanza que llega después de la tormenta: fe renovada, inspiración y la sensación de que el camino vuelve a tener sentido.', rev:'Puede señalar desánimo temporal o una desconexión del propio propósito, aunque la esperanza no está perdida, solo momentáneamente nublada.', sym:'★', img:'d/db/RWS_Tarot_17_Star.jpg'},
+ {n:'La Luna', up:'Simboliza el territorio del subconsciente, la intuición y todo aquello que no se ve con claridad racional. Invita a confiar en lo que se siente, aunque no se pueda explicar del todo.', rev:'Indica que una confusión se está empezando a disipar, o que ciertos miedos ocultos necesitan salir a la luz para dejar de tener poder.', planet:'Luna', sym:'☾', img:'7/7f/RWS_Tarot_18_Moon.jpg'},
+ {n:'El Sol', up:'Representa vitalidad, éxito y una claridad que ilumina cualquier situación. Es una de las cartas más favorables del mazo: alegría genuina y resultados visibles.', rev:'Puede señalar un optimismo exagerado que no ve los detalles, o un éxito que se está retrasando pero que sigue en camino.', planet:'Sol', sym:'☀', img:'1/17/RWS_Tarot_19_Sun.jpg'},
+ {n:'El Juicio', up:'Simboliza un llamado interior a evaluar el camino recorrido y renacer desde una versión más consciente de uno mismo. Es una carta de absolución y de segundas oportunidades.', rev:'Advierte sobre autocrítica excesiva, o una oportunidad de cambio que no se ha tomado por miedo al juicio propio o ajeno.', sym:'↑', img:'d/dd/RWS_Tarot_20_Judgement.jpg'},
+ {n:'El Mundo', up:'Representa la culminación de un ciclo completo: logro, plenitud e integración de todo lo aprendido en el camino. Es una de las cartas de mayor realización del mazo.', rev:'Puede señalar un ciclo casi terminado al que le falta un último paso, o la sensación de que algo quedó incompleto y necesita cierre.', planet:'Saturno', sym:'⊕', img:'f/ff/RWS_Tarot_21_World.jpg'}
+];
+const SUITS=[{n:'Oros',tema:'el dinero, el trabajo y lo material',imgKey:'Pents'},{n:'Copas',tema:'las emociones, el amor y los vínculos',imgKey:'Cups'},{n:'Espadas',tema:'el pensamiento, la verdad y el conflicto',imgKey:'Swords'},{n:'Bastos',tema:'la acción, la pasión y la creación',imgKey:'Wands'}];
+const NUM_KEY=[
+ {r:'As',n:1,up:'Representa una semilla nueva en el terreno de {tema}: el comienzo puro de algo que todavía no tiene forma, pero ya tiene dirección.',rev:'Señala una oportunidad en el terreno de {tema} que no se ha aprovechado, o un comienzo frenado antes de tiempo.'},
+ {r:'2',n:2,up:'Simboliza un momento de equilibrio y elección dentro de {tema}, donde dos caminos posibles piden ser sopesados con calma.',rev:'Indica una decisión postergada o un desequilibrio dentro de {tema} que genera indecisión.'},
+ {r:'3',n:3,up:'Habla de crecimiento a través de la colaboración en {tema}: los primeros resultados de un esfuerzo compartido empiezan a notarse.',rev:'Señala falta de apoyo o una colaboración fallida dentro de {tema}, lo que ralentiza el avance.'},
+ {r:'4',n:4,up:'Representa estructura y estabilidad ya consolidadas en {tema}, una base sólida sobre la cual seguir construyendo.',rev:'Puede indicar rigidez excesiva, o una estabilidad en {tema} que se ha vuelto una zona de confort limitante.'},
+ {r:'5',n:5,up:'Simboliza tensión y un cambio necesario dentro de {tema}: un conflicto que, aunque incómodo, empuja hacia una versión más fuerte de la situación.',rev:'Señala que el conflicto en {tema} ya se está resolviendo, o que persiste por evitar una conversación pendiente.'},
+ {r:'6',n:6,up:'Representa armonía y generosidad dentro de {tema}, un intercambio equilibrado entre dar y recibir.',rev:'Indica un desequilibrio en {tema} donde se da más de lo que se recibe, o viceversa.'},
+ {r:'7',n:7,up:'Invita a la reflexión dentro de {tema}: una evaluación honesta de qué se ha estado sembrando y hacia dónde conduce.',rev:'Señala dispersión de esfuerzos en {tema}, o una prueba que se ha estado evitando enfrentar.'},
+ {r:'8',n:8,up:'Simboliza maestría y poder aplicado con disciplina dentro de {tema}: el esfuerzo constante empieza a dar frutos visibles.',rev:'Puede indicar estancamiento por exceso de rutina en {tema}, o un esfuerzo mal dirigido que no rinde lo esperado.'},
+ {r:'9',n:9,up:'Representa la cercanía a la culminación dentro de {tema}: casi se ha llegado a la meta, falta un último tramo.',rev:'Señala agotamiento o miedo a perder lo construido en {tema}, justo antes de completarlo.'},
+ {r:'10',n:10,up:'Simboliza la plenitud y el cierre de un ciclo completo en {tema}, con todos sus aprendizajes ya integrados.',rev:'Puede indicar que un ciclo en {tema} se extiende más de lo necesario, o una transición de cierre que aún no se termina de asumir.'}
+];
+const COURT=[
+ {r:'Paje',n:11,up:'Representa al mensajero curioso de {tema}: una etapa de aprendizaje, apertura y disposición a explorar algo nuevo.',rev:'Señala inmadurez o falta de compromiso dentro de {tema}, o un mensaje que todavía no ha llegado.'},
+ {r:'Caballero',n:12,up:'Simboliza la acción decidida dentro de {tema}: una búsqueda activa que avanza con energía e impulso propio.',rev:'Puede indicar impulsividad, o un avance en {tema} que se ha vuelto errático por falta de dirección clara.'},
+ {r:'Reina',n:13,up:'Representa el dominio interior y maduro de {tema}: la capacidad de sostener y nutrir esa área de la vida desde la seguridad propia.',rev:'Señala inseguridad interna respecto a {tema}, o una energía receptiva que se ha vuelto sobreexigida.'},
+ {r:'Rey',n:14,up:'Simboliza la maestría exterior y la autoridad consolidada dentro de {tema}: control, experiencia y capacidad de decisión.',rev:'Puede indicar un uso rígido o excesivo del control dentro de {tema}, o una autoridad que no se está ejerciendo cuando se necesita.'}
+];
+
+const SUIT_ICON = {Oros:'⊙', Copas:'▽', Espadas:'†', Bastos:'▲'};
+
+/* Rutas verificadas del mazo Rider-Waite-Smith (1909), dominio público,
+   alojadas en Wikimedia Commons. Los menores usan un mapa {suit}{01-14}. */
+const MINOR_IMG = {
+  Wands:{1:'1/11/Wands01.jpg',2:'0/0f/Wands02.jpg',3:'f/ff/Wands03.jpg',4:'a/a4/Wands04.jpg',5:'9/9d/Wands05.jpg',6:'3/3b/Wands06.jpg',7:'e/e4/Wands07.jpg',8:'6/6b/Wands08.jpg',9:'4/4d/Tarot_Nine_of_Wands.jpg',10:'0/0b/Wands10.jpg',11:'6/6a/Wands11.jpg',12:'1/16/Wands12.jpg',13:'0/0d/Wands13.jpg',14:'c/ce/Wands14.jpg'},
+  Cups:{1:'3/36/Cups01.jpg',2:'f/f8/Cups02.jpg',3:'7/7a/Cups03.jpg',4:'3/35/Cups04.jpg',5:'d/d7/Cups05.jpg',6:'1/17/Cups06.jpg',7:'a/ae/Cups07.jpg',8:'6/60/Cups08.jpg',9:'2/24/Cups09.jpg',10:'8/84/Cups10.jpg',11:'a/ad/Cups11.jpg',12:'f/fa/Cups12.jpg',13:'6/62/Cups13.jpg',14:'0/04/Cups14.jpg'},
+  Swords:{1:'1/1a/Swords01.jpg',2:'9/9e/Swords02.jpg',3:'0/02/Swords03.jpg',4:'b/bf/Swords04.jpg',5:'2/23/Swords05.jpg',6:'2/29/Swords06.jpg',7:'3/34/Swords07.jpg',8:'a/a7/Swords08.jpg',9:'2/2f/Swords09.jpg',10:'d/d4/Swords10.jpg',11:'4/4c/Swords11.jpg',12:'b/b0/Swords12.jpg',13:'d/d4/Swords13.jpg',14:'3/33/Swords14.jpg'},
+  Pents:{1:'f/fd/Pents01.jpg',2:'9/9f/Pents02.jpg',3:'4/42/Pents03.jpg',4:'3/35/Pents04.jpg',5:'9/96/Pents05.jpg',6:'a/a6/Pents06.jpg',7:'6/6a/Pents07.jpg',8:'4/49/Pents08.jpg',9:'f/f0/Pents09.jpg',10:'4/42/Pents10.jpg',11:'e/ec/Pents11.jpg',12:'d/d5/Pents12.jpg',13:'8/88/Pents13.jpg',14:'1/1c/Pents14.jpg'}
+};
+const IMG_BASE = 'https://upload.wikimedia.org/wikipedia/commons/';
+
+let DECK = MAJOR.map(c=>({name:c.n, up:c.up, rev:c.rev, planet:c.planet||null, arcana:'Mayor', sym:c.sym, img:IMG_BASE+c.img}));
+SUITS.forEach(s=>{
+  NUM_KEY.forEach(nk=>{
+    DECK.push({name:`${nk.r} de ${s.n}`, up:nk.up.replace('{tema}',s.tema), rev:nk.rev.replace('{tema}',s.tema), planet:null, arcana:s.n, rank:nk.r, img:IMG_BASE+MINOR_IMG[s.imgKey][nk.n]});
+  });
+  COURT.forEach(ct=>{
+    DECK.push({name:`${ct.r} de ${s.n}`, up:ct.up.replace('{tema}',s.tema), rev:ct.rev.replace('{tema}',s.tema), planet:null, arcana:s.n, rank:ct.r, img:IMG_BASE+MINOR_IMG[s.imgKey][ct.n]});
+  });
+});
+
+/* ============ ROSTRO DE CARTA: ilustración real del Tarot Rider-Waite-Smith
+   (1909, dominio público). Si la imagen no carga (sin conexión, por ejemplo),
+   cae automáticamente al símbolo como respaldo. ============ */
+function cardFaceHTML(card){
+  const fallback = card.arcana==='Mayor'
+    ? `<span class="face-symbol">${card.sym||'✦'}</span>`
+    : `<span class="face-suit">${SUIT_ICON[card.arcana]||'◆'}</span><span class="face-rank">${card.rank||''}</span>`;
+  return `<div class="face">
+      <span class="face-fallback">${fallback}</span>
+      <img src="${card.img}" alt="${card.name}" loading="lazy" onerror="this.style.display='none'">
+    </div>`;
+}
+
+/* ============ SEEDED RNG ============ */
+function hashString(s){let h=1779033703^s.length;for(let i=0;i<s.length;i++){h=Math.imul(h^s.charCodeAt(i),3432918353);h=h<<13|h>>>19;}return (h^h>>>16)>>>0;}
+function mulberry32(seed){return function(){seed|=0; seed=seed+0x6D2B79F5|0; let t=Math.imul(seed^seed>>>15,1|seed); t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296;};}
+function getRng(){
+  const seedTxt=(document.getElementById('seedInput')?.value||'').trim();
+  const todayTxt=new Date().toDateString();
+  const base = seedTxt ? seedTxt+'|'+todayTxt : 'anon|'+todayTxt+'|'+Math.random();
+  return mulberry32(hashString(base));
+}
+
+/* ============ DAY RULER / ACTIVATION ============ */
+const DAY_RULERS=['Sol','Luna','Marte','Mercurio','Júpiter','Venus','Saturno'];
+function todaysRulerPlanet(){ return DAY_RULERS[new Date().getDay()]; }
+function boostedCardName(planet){ const c=MAJOR.find(c=>c.planet===planet); return c? c.n : null; }
+
+function renderActivationBox(){
+  const planet = todaysRulerPlanet();
+  const card = boostedCardName(planet);
+  document.getElementById('activationBox').innerHTML =
+    `Hoy el planeta regente es <b>${planet}</b>. Su carta correspondiente, <b>${card}</b>, tiene mayor probabilidad de aparecer en tu tirada — así es como el cielo activa el mazo.`;
+}
+
+/* ============ WEIGHTED SHUFFLE (no replacement) ============ */
+function weightedDraw(count, rng){
+  const planet = todaysRulerPlanet();
+  const pool=[];
+  DECK.forEach((c,i)=>{
+    let w = c.planet===planet ? 3 : 1;
+    for(let k=0;k<w;k++) pool.push(i);
+  });
+  // seeded shuffle of pool
+  for(let i=pool.length-1;i>0;i--){ const j=Math.floor(rng()*(i+1)); [pool[i],pool[j]]=[pool[j],pool[i]]; }
+  const picked=[]; const seen=new Set();
+  for(const idx of pool){
+    if(!seen.has(idx)){ seen.add(idx); picked.push(idx); if(picked.length>=count) break; }
+  }
+  return picked.map(idx=>{
+    const reversed = rng()<0.35;
+    return {card:DECK[idx], reversed};
+  });
+}
+
+/* ============ SPREADS ============ */
+const SPREADS = {
+  triangulo:{
+    label:'Triángulo Primordial',
+    desc:'Tirada de tres cartas: Ka (esencia/pasado), Cuerpo (presente) y Ba (espíritu/futuro) — los tres principios del alma egipcia.',
+    positions:['Ka · Pasado','Cuerpo · Presente','Ba · Futuro']
+  },
+  celta:{
+    label:'Cruz Celta · Laberinto Céltico',
+    desc:'Diez cartas recorren el laberinto de tu situación: el centro, los cruces y el camino de salida.',
+    positions:['Situación','Desafío','Raíz / base','Pasado reciente','Meta consciente','Futuro cercano','Tú mismo/a','Entorno','Esperanzas y miedos','Resultado']
+  },
+  ankh:{
+    label:'Cruz Ankh Egipcia',
+    desc:'Seis cartas en forma de Ankh, el símbolo de la vida eterna: cuerpo, alma y el lazo que une pasado, presente y futuro.',
+    positions:['Cuerpo','Alma','Pasado','Presente','Futuro','Eternidad · Destino']
+  },
+  estrella:{
+    label:'Estrella de 7 Puntas · Chakras',
+    desc:'Siete cartas, una por cada chakra, para ver dónde fluye tu energía y dónde se bloquea.',
+    positions:['Raíz','Sacro','Plexo Solar','Corazón','Garganta','Tercer Ojo','Corona']
+  },
+  rueda:{
+    label:'Rueda Zodiacal · 12 Casas',
+    desc:'Tu mapa natal tarotizado: doce cartas, una por cada casa astrológica.',
+    positions:['I · Identidad','II · Recursos','III · Comunicación','IV · Raíces','V · Creatividad','VI · Rutina y salud','VII · Relaciones','VIII · Transformación','IX · Expansión','X · Vocación','XI · Comunidad','XII · Inconsciente']
+  },
+  union:{
+    label:'Tirada de la Unión',
+    desc:'Cuatro cartas enfocadas en el tema que elijas.',
+    positionsByCat:{
+      dinero:['Situación actual','Bloqueo','Acción recomendada','Resultado'],
+      viajes:['Punto de partida','Camino','Obstáculo','Destino'],
+      empleo:['Presente laboral','Lo que debes soltar','Oportunidad oculta','Nuevo rumbo'],
+      amor:['Tú','La otra persona','La conexión','Hacia dónde va'],
+      relocalizacion:['Raíces actuales','Lo que te llama','Desafío del cambio','Nuevo hogar']
+    }
+  }
+};
+let currentSpread='triangulo';
+
+function renderSpreadTabs(){
+  const wrap=document.getElementById('spreadTabs'); wrap.innerHTML='';
+  Object.keys(SPREADS).forEach(key=>{
+    const b=document.createElement('button');
+    b.className='tab-btn'+(key===currentSpread?' active':'');
+    b.textContent=SPREADS[key].label;
+    b.onclick=()=>{ currentSpread=key; renderSpreadTabs(); renderSpreadInfo(); };
+    wrap.appendChild(b);
+  });
+}
+function renderSpreadInfo(){
+  const s=SPREADS[currentSpread];
+  document.getElementById('spreadInfo').innerHTML = `<h3>${s.label}</h3><p>${s.desc}</p>`;
+  document.getElementById('unionSelectWrap').style.display = currentSpread==='union' ? 'flex':'none';
+  document.getElementById('cardLayout').innerHTML='';
+}
+
+document.getElementById('drawBtn').addEventListener('click', ()=>{
+  const rng=getRng();
+  const s=SPREADS[currentSpread];
+  let positions = s.positions;
+  if(currentSpread==='union'){ positions = s.positionsByCat[document.getElementById('unionCategory').value]; }
+  const draws = weightedDraw(positions.length, rng);
+  const layout=document.getElementById('cardLayout'); layout.innerHTML='';
+  draws.forEach((d,i)=>{
+    const div=document.createElement('div');
+    div.className='tarot-card'+(d.reversed?' reversed':'');
+    div.innerHTML = `<div class="position-label">${positions[i]}</div>
+      ${cardFaceHTML(d.card)}
+      <div class="cardname">${d.card.name}${d.reversed?' (inv.)':''}</div>
+      <div class="cardmean">${d.reversed?d.card.rev:d.card.up}</div>`;
+    layout.appendChild(div);
+  });
+  renderSynthesis('synthesisBox', draws, positions, s.label);
+});
+
+/* ============ SÍNTESIS DE LA TIRADA ============
+   Después de leer cada carta por separado, esta función construye un
+   párrafo que integra el conjunto: qué predomina, cómo abre y cómo cierra
+   la tirada, y qué relato conjunto cuentan las cartas juntas. */
+function synthesizeReading(draws, positions, spreadLabel){
+  const n = draws.length;
+  if(n < 2) return '';
+
+  const majors = draws.filter(d=>d.card.arcana==='Mayor');
+  const reversedCount = draws.filter(d=>d.reversed).length;
+  const suitCounts = {};
+  draws.forEach(d=>{ if(d.card.arcana!=='Mayor'){ suitCounts[d.card.arcana]=(suitCounts[d.card.arcana]||0)+1; } });
+  let dominantSuit=null, dominantCount=0;
+  Object.entries(suitCounts).forEach(([suit,c])=>{ if(c>dominantCount){ dominantSuit=suit; dominantCount=c; } });
+
+  const first=draws[0], last=draws[n-1];
+  const parts=[];
+
+  parts.push(`Esta ${spreadLabel} se abre bajo la energía de <b>${first.card.name}</b>${first.reversed?' invertida':''} en la posición «${positions[0]}», y se cierra en <b>${last.card.name}</b>${last.reversed?' invertida':''} sobre «${positions[n-1]}».`);
+
+  if(majors.length >= Math.ceil(n*0.5)){
+    parts.push(`La presencia de ${majors.length} arcano${majors.length===1?'':'s'} mayor${majors.length===1?'':'es'} señala que esta no es una consulta menor: hay fuerzas de fondo, casi de destino, moviéndose en esta situación.`);
+  } else if(majors.length===0){
+    parts.push('Ningún arcano mayor aparece en esta tirada, lo que sugiere que el foco está en decisiones y circunstancias cotidianas, más que en un giro kármico profundo.');
+  }
+
+  if(dominantSuit && dominantCount >= Math.ceil(n*0.4)){
+    const suitTheme = {Oros:'lo material, el trabajo y la estabilidad económica', Copas:'las emociones, los vínculos y el mundo afectivo', Espadas:'el pensamiento, la comunicación y los conflictos por resolver', Bastos:'la acción, la voluntad y el impulso creativo'};
+    parts.push(`Predomina el palo de ${dominantSuit} (${dominantCount} de ${n} cartas), lo que centra la lectura en ${suitTheme[dominantSuit]}.`);
+  }
+
+  const reversedRatio = reversedCount/n;
+  if(reversedRatio >= 0.5){
+    parts.push(`Con ${reversedCount} carta${reversedCount===1?'':'s'} invertida${reversedCount===1?'':'s'}, el mensaje pide mirar hacia adentro: hay resistencias, bloqueos o aprendizajes pendientes antes de que la energía fluya con libertad.`);
+  } else if(reversedCount===0){
+    parts.push('Todas las cartas aparecen en su posición derecha, señal de que la energía de esta tirada fluye sin grandes obstáculos internos.');
+  }
+
+  parts.push('Cada carta conserva su propio mensaje en la posición donde cayó, pero juntas dibujan un solo relato: el que se está viviendo ahora mismo. Si quieres profundizar en cómo conectan entre sí, ese es justamente el trabajo de una consulta personalizada.');
+
+  return parts.join(' ');
+}
+
+function renderSynthesis(boxId, draws, positions, spreadLabel){
+  const box = document.getElementById(boxId);
+  const text = synthesizeReading(draws, positions, spreadLabel);
+  if(!text){ box.classList.remove('show'); box.innerHTML=''; return; }
+  box.innerHTML = `<div class="synthesis-title">Lectura de conjunto</div><p>${text}</p>`;
+  box.classList.add('show');
+}
+
+/* ============ EYE OF RA / CARD OF THE DAY ============ */
+document.getElementById('eyeBtn').addEventListener('click', ()=>{
+  const rng=mulberry32(hashString('eye-of-ra|'+new Date().toDateString()));
+  const draw = weightedDraw(1, rng)[0];
+  const planet = todaysRulerPlanet();
+  document.getElementById('eyeCardName').textContent = draw.card.name + (draw.reversed?' (invertida)':'');
+  document.getElementById('eyeCardMeaning').textContent = draw.reversed? draw.card.rev : draw.card.up;
+  document.getElementById('eyeCardPlanet').textContent = `Regente del día: ${planet}`;
+  document.getElementById('eyeReveal').classList.add('show');
+});
+
+/* ============ RUNES ============ */
+const RUNES=[
+ {n:'Fehu',k:'riqueza, ganancia, energía en movimiento', g:'ᚠ'},
+ {n:'Uruz',k:'fuerza vital, vigor, voluntad primitiva', g:'ᚢ'},
+ {n:'Thurisaz',k:'confrontación, protección, ruptura necesaria', g:'ᚦ'},
+ {n:'Ansuz',k:'comunicación, sabiduría recibida, mensaje', g:'ᚨ'},
+ {n:'Raidho',k:'viaje, ritmo, movimiento con propósito', g:'ᚱ'},
+ {n:'Kenaz',k:'conocimiento, luz interior, creatividad', g:'ᚲ'},
+ {n:'Gebo',k:'intercambio, regalo, equilibrio entre dar y recibir', g:'ᚷ'},
+ {n:'Wunjo',k:'alegría, armonía, recompensa merecida', g:'ᚹ'},
+ {n:'Hagalaz',k:'disrupción, fuerza natural, cambio inevitable', g:'ᚺ'},
+ {n:'Nauthiz',k:'necesidad, resistencia, lección forjada en dificultad', g:'ᚾ'},
+ {n:'Isa',k:'quietud, pausa, congelamiento temporal', g:'ᛁ'},
+ {n:'Jera',k:'cosecha, ciclo cumplido, resultado del esfuerzo', g:'ᛃ'},
+ {n:'Eihwaz',k:'resiliencia, conexión entre mundos, transformación', g:'ᛇ'},
+ {n:'Perthro',k:'destino, misterio, lo oculto que se revela', g:'ᛈ'},
+ {n:'Algiz',k:'protección, conexión superior, instinto de defensa', g:'ᛉ'},
+ {n:'Sowilo',k:'éxito, energía solar, claridad total', g:'ᛊ'},
+ {n:'Tiwaz',k:'justicia, honor, sacrificio con propósito', g:'ᛏ'},
+ {n:'Berkano',k:'nuevo crecimiento, fertilidad, cuidado', g:'ᛒ'},
+ {n:'Ehwaz',k:'avance conjunto, confianza, movimiento leal', g:'ᛖ'},
+ {n:'Mannaz',k:'humanidad, el yo social, cooperación', g:'ᛗ'},
+ {n:'Laguz',k:'flujo emocional, intuición, aguas profundas', g:'ᛚ'},
+ {n:'Ingwaz',k:'potencial acumulado, fertilidad interior, gestación', g:'ᛜ'},
+ {n:'Dagaz',k:'amanecer, avance decisivo, transformación positiva', g:'ᛞ'},
+ {n:'Othala',k:'herencia, hogar, valores heredados', g:'ᛟ'}
+];
+const RUNE_MODES={
+  single:{label:'Runa del día', count:1, positions:['Mensaje del día']},
+  triple:{label:'Pasado · Presente · Futuro', count:3, positions:['Pasado','Presente','Futuro']}
+};
+let currentRuneMode='single';
+function renderRuneTabs(){
+  const wrap=document.getElementById('runeTabs'); wrap.innerHTML='';
+  Object.keys(RUNE_MODES).forEach(key=>{
+    const b=document.createElement('button');
+    b.className='tab-btn'+(key===currentRuneMode?' active':'');
+    b.textContent=RUNE_MODES[key].label;
+    b.onclick=()=>{ currentRuneMode=key; renderRuneTabs(); };
+    wrap.appendChild(b);
+  });
+}
+document.getElementById('runeDrawBtn').addEventListener('click', ()=>{
+  const rng=getRng();
+  const mode=RUNE_MODES[currentRuneMode];
+  const idxs=[]; const pool=[...Array(RUNES.length).keys()];
+  for(let i=pool.length-1;i>0;i--){ const j=Math.floor(rng()*(i+1)); [pool[i],pool[j]]=[pool[j],pool[i]]; }
+  const picked=pool.slice(0,mode.count);
+  const layout=document.getElementById('runeLayout'); layout.innerHTML='';
+  picked.forEach((idx,i)=>{
+    const r=RUNES[idx];
+    const div=document.createElement('div'); div.className='tarot-card';
+    div.innerHTML=`<div class="position-label">${mode.positions[i]}</div>
+      <div class="face"><span class="rune-glyph">${r.g}</span></div>
+      <div class="cardname">${r.n}</div>
+      <div class="cardmean">${r.k}</div>`;
+    layout.appendChild(div);
+  });
+});
+
+/* ============ NUMEROLOGY ============ */
+const NUM_MEANINGS={
+ 1:'Liderazgo, independencia, inicio de un nuevo camino propio.',
+ 2:'Cooperación, sensibilidad, equilibrio a través del otro.',
+ 3:'Expresión, creatividad, comunicación gozosa.',
+ 4:'Orden, disciplina, construcción de bases sólidas.',
+ 5:'Libertad, cambio, experiencias que expanden.',
+ 6:'Responsabilidad, cuidado, armonía en el hogar y los vínculos.',
+ 7:'Introspección, análisis, búsqueda espiritual.',
+ 8:'Poder material, logro, gestión de recursos.',
+ 9:'Servicio, cierre de ciclos, sabiduría compartida.',
+ 11:'Número maestro: intuición elevada, inspiración, guía espiritual.',
+ 22:'Número maestro: el constructor, visión llevada a lo concreto en gran escala.',
+ 33:'Número maestro: entrega compasiva, maestría al servicio de otros.'
+};
+function reduceNumber(n){
+  while(n>9 && n!==11 && n!==22 && n!==33){ n=String(n).split('').reduce((a,b)=>a+parseInt(b,10),0); }
+  return n;
+}
+function lifePathFromDate(dateStr){
+  const digits=dateStr.replace(/-/g,'').split('').reduce((a,b)=>a+parseInt(b,10),0);
+  return reduceNumber(digits);
+}
+const LETTER_MAP={};
+'AJS'.split('').forEach(c=>LETTER_MAP[c]=1); 'BKT'.split('').forEach(c=>LETTER_MAP[c]=2);
+'CLU'.split('').forEach(c=>LETTER_MAP[c]=3); 'DMV'.split('').forEach(c=>LETTER_MAP[c]=4);
+'ENW'.split('').forEach(c=>LETTER_MAP[c]=5); 'FOX'.split('').forEach(c=>LETTER_MAP[c]=6);
+'GPY'.split('').forEach(c=>LETTER_MAP[c]=7); 'HQZ'.split('').forEach(c=>LETTER_MAP[c]=8);
+'IR'.split('').forEach(c=>LETTER_MAP[c]=9);
+function destinyFromName(name){
+  const clean=name.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^A-Z]/g,'');
+  let sum=0; for(const ch of clean){ sum += LETTER_MAP[ch]||0; }
+  return reduceNumber(sum);
+}
+let numMode='solo';
+document.querySelectorAll('[data-nummode]').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('[data-nummode]').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active'); numMode=btn.dataset.nummode;
+  });
+});
+document.getElementById('numBtn').addEventListener('click', ()=>{
+  const name=document.getElementById('numName').value.trim();
+  const date=document.getElementById('numDate').value;
+  if(!name || !date){ alert('Introduce tu nombre completo y tu fecha de nacimiento.'); return; }
+  const lp=lifePathFromDate(date);
+  const dn=destinyFromName(name);
+  let extra='';
+  const rng=getRng();
+  if(numMode==='tarot'){
+    const d=weightedDraw(1,rng)[0];
+    extra = `<div class="hairline"></div><div class="title">Carta que dialoga con tus números</div><p class="desc"><b>${d.card.name}</b> — ${d.reversed?d.card.rev:d.card.up}</p>`;
+  } else if(numMode==='runas'){
+    const idx=Math.floor(rng()*RUNES.length);
+    extra = `<div class="hairline"></div><div class="title">Runa que dialoga con tus números</div><p class="desc"><span class="rune-glyph">${RUNES[idx].g}</span> <b>${RUNES[idx].n}</b> — ${RUNES[idx].k}</p>`;
+  }
+  document.getElementById('numResult').style.display='block';
+  document.getElementById('numResult').innerHTML = `
+    <div class="title">Camino de Vida: ${lp}</div>
+    <p class="desc">${NUM_MEANINGS[lp]}</p>
+    <div class="hairline"></div>
+    <div class="title">Número de Destino: ${dn}</div>
+    <p class="desc">${NUM_MEANINGS[dn]}</p>
+    ${extra}`;
+});
+
+/* ============ MOON PHASE ============ */
+function moonPhaseInfo(date){
+  const synodic=29.530588853;
+  const refNewMoon = Date.UTC(2000,0,6,18,14,0)/1000;
+  const diffDays = (date.getTime()/1000 - refNewMoon)/86400;
+  let phase = (diffDays % synodic)/synodic; if(phase<0) phase+=1;
+  const names=[
+    {max:0.03,name:'Luna Nueva',e:'🌑'},{max:0.22,name:'Luna Creciente',e:'🌒'},
+    {max:0.28,name:'Cuarto Creciente',e:'🌓'},{max:0.47,name:'Gibosa Creciente',e:'🌔'},
+    {max:0.53,name:'Luna Llena',e:'🌕'},{max:0.72,name:'Gibosa Menguante',e:'🌖'},
+    {max:0.78,name:'Cuarto Menguante',e:'🌗'},{max:0.97,name:'Luna Menguante',e:'🌘'},{max:1.01,name:'Luna Nueva',e:'🌑'}
+  ];
+  for(const n of names){ if(phase<=n.max) return n; }
+  return names[0];
+}
+function renderTodayMoon(){
+  const info=moonPhaseInfo(new Date());
+  document.getElementById('todayMoonEmoji').textContent=info.e;
+  document.getElementById('todayMoonName').textContent=info.name;
+  document.getElementById('todayMoonDate').textContent=new Date().toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+}
+
+/* ============ RETROGRADES 2026 ============ */
+const RETROGRADES_2026=[
+  {planet:'Mercurio', sign:'Piscis', start:'2026-02-25', end:'2026-03-20'},
+  {planet:'Mercurio', sign:'Cáncer', start:'2026-06-29', end:'2026-07-23'},
+  {planet:'Mercurio', sign:'Escorpio', start:'2026-10-24', end:'2026-11-13'},
+  {planet:'Venus', sign:'Escorpio/Libra', start:'2026-10-03', end:'2026-11-14'},
+  {planet:'Júpiter', sign:'Cáncer', start:'2026-01-01', end:'2026-03-10'},
+  {planet:'Júpiter', sign:'Leo', start:'2026-12-12', end:'2026-12-31'},
+  {planet:'Saturno', sign:'Aries', start:'2026-07-26', end:'2026-12-10'},
+  {planet:'Urano', sign:'Géminis', start:'2026-01-01', end:'2026-02-04'},
+  {planet:'Urano', sign:'Géminis', start:'2026-09-10', end:'2026-12-31'},
+  {planet:'Neptuno', sign:'Aries', start:'2026-07-07', end:'2026-12-12'},
+  {planet:'Plutón', sign:'Acuario', start:'2026-05-06', end:'2026-10-16'},
+  {planet:'Quirón', sign:'Aries/Tauro', start:'2026-08-03', end:'2026-12-31'}
+];
+function renderRetroTable(){
+  const tbody=document.querySelector('#retroTable tbody'); tbody.innerHTML='';
+  const now=new Date();
+  const active=[];
+  RETROGRADES_2026.forEach(r=>{
+    const s=new Date(r.start), e=new Date(r.end);
+    const isActive = now>=s && now<=e;
+    if(isActive) active.push(r);
+    const tr=document.createElement('tr'); if(isActive) tr.className='active-now';
+    tr.innerHTML=`<td>${r.planet}</td><td>${s.toLocaleDateString('es-ES')} – ${e.toLocaleDateString('es-ES')}</td><td>${r.sign}</td>`;
+    tbody.appendChild(tr);
+  });
+  document.getElementById('activeRetro').innerHTML = active.length
+    ? active.map(a=>`<b>${a.planet}</b> retrógrado (${a.sign})`).join(' · ')
+    : 'Ningún planeta mayor retrógrado en este momento.';
+}
+
+/* ============ NATAL PREVIEW ============ */
+const ZODIAC=[
+ {name:'Capricornio', from:[1,1], to:[1,19]}, {name:'Acuario', from:[1,20], to:[2,18]},
+ {name:'Piscis', from:[2,19], to:[3,20]}, {name:'Aries', from:[3,21], to:[4,19]},
+ {name:'Tauro', from:[4,20], to:[5,20]}, {name:'Géminis', from:[5,21], to:[6,20]},
+ {name:'Cáncer', from:[6,21], to:[7,22]}, {name:'Leo', from:[7,23], to:[8,22]},
+ {name:'Virgo', from:[8,23], to:[9,22]}, {name:'Libra', from:[9,23], to:[10,22]},
+ {name:'Escorpio', from:[10,23], to:[11,21]}, {name:'Sagitario', from:[11,22], to:[12,21]},
+ {name:'Capricornio', from:[12,22], to:[12,31]}
+];
+function sunSign(month,day){
+  for(const z of ZODIAC){
+    const [fm,fd]=z.from, [tm,td]=z.to;
+    if(fm===tm){ if(month===fm && day>=fd && day<=td) return z.name; }
+    else if(month===fm && day>=fd) return z.name;
+    else if(month===tm && day<=td) return z.name;
+  }
+  return 'Capricornio';
+}
+const ZODIAC_ORDER=['Aries','Tauro','Géminis','Cáncer','Leo','Virgo','Libra','Escorpio','Sagitario','Capricornio','Acuario','Piscis'];
+function signFromLongitude(lon){
+  lon=((lon%360)+360)%360;
+  return ZODIAC_ORDER[Math.floor(lon/30)];
+}
+function moonSignApprox(date){
+  const J2000=Date.UTC(2000,0,1,12,0,0);
+  const d=(date.getTime()-J2000)/86400000;
+  const L=218.316+13.176396*d;
+  const M=(134.963+13.064993*d)*Math.PI/180;
+  const lon = L + 6.289*Math.sin(M);
+  return signFromLongitude(lon);
+}
+function julianDate(date){ return date.getTime()/86400000 + 2440587.5; }
+function ascendantApprox(date, lonDeg, latDeg){
+  const JD=julianDate(date);
+  const T=(JD-2451545.0)/36525;
+  let GMST=280.46061837+360.98564736629*(JD-2451545.0)+0.000387933*T*T-(T*T*T)/38710000;
+  GMST=((GMST%360)+360)%360;
+  let LST=(GMST+lonDeg+360)%360;
+  const obl=23.4367*Math.PI/180;
+  const LSTr=LST*Math.PI/180, latR=latDeg*Math.PI/180;
+  let y=-Math.cos(LSTr);
+  let x=Math.sin(LSTr)*Math.cos(obl)+Math.tan(latR)*Math.sin(obl);
+  let asc=Math.atan2(y,x)*180/Math.PI;
+  asc=((asc%360)+360)%360;
+  return signFromLongitude(asc);
+}
+
+/* ============ PAÍS + AUTOCOMPLETADO DE CIUDAD (geocodificación real) ============ */
+const COUNTRIES = [
+  {n:'España',c:'es'},{n:'México',c:'mx'},{n:'Argentina',c:'ar'},{n:'Colombia',c:'co'},{n:'Chile',c:'cl'},
+  {n:'Perú',c:'pe'},{n:'Venezuela',c:'ve'},{n:'Ecuador',c:'ec'},{n:'Guatemala',c:'gt'},{n:'Cuba',c:'cu'},
+  {n:'Bolivia',c:'bo'},{n:'República Dominicana',c:'do'},{n:'Honduras',c:'hn'},{n:'Paraguay',c:'py'},{n:'Nicaragua',c:'ni'},
+  {n:'El Salvador',c:'sv'},{n:'Costa Rica',c:'cr'},{n:'Panamá',c:'pa'},{n:'Uruguay',c:'uy'},{n:'Puerto Rico',c:'pr'},
+  {n:'Estados Unidos',c:'us'},{n:'Canadá',c:'ca'},{n:'Brasil',c:'br'},
+  {n:'Portugal',c:'pt'},{n:'Francia',c:'fr'},{n:'Italia',c:'it'},{n:'Alemania',c:'de'},{n:'Reino Unido',c:'gb'},
+  {n:'Irlanda',c:'ie'},{n:'Países Bajos',c:'nl'},{n:'Bélgica',c:'be'},{n:'Suiza',c:'ch'},{n:'Austria',c:'at'},
+  {n:'Suecia',c:'se'},{n:'Noruega',c:'no'},{n:'Dinamarca',c:'dk'},{n:'Finlandia',c:'fi'},{n:'Polonia',c:'pl'},
+  {n:'Rumanía',c:'ro'},{n:'Grecia',c:'gr'},{n:'República Checa',c:'cz'},{n:'Hungría',c:'hu'},{n:'Bulgaria',c:'bg'},
+  {n:'Croacia',c:'hr'},{n:'Serbia',c:'rs'},{n:'Ucrania',c:'ua'},{n:'Rusia',c:'ru'},{n:'Turquía',c:'tr'},
+  {n:'Marruecos',c:'ma'},{n:'Argelia',c:'dz'},{n:'Túnez',c:'tn'},{n:'Egipto',c:'eg'},{n:'Sudáfrica',c:'za'},
+  {n:'Nigeria',c:'ng'},{n:'Kenia',c:'ke'},{n:'Senegal',c:'sn'},{n:'Guinea Ecuatorial',c:'gq'},
+  {n:'China',c:'cn'},{n:'Japón',c:'jp'},{n:'Corea del Sur',c:'kr'},{n:'India',c:'in'},{n:'Filipinas',c:'ph'},
+  {n:'Indonesia',c:'id'},{n:'Tailandia',c:'th'},{n:'Vietnam',c:'vn'},{n:'Israel',c:'il'},{n:'Emiratos Árabes Unidos',c:'ae'},
+  {n:'Arabia Saudita',c:'sa'},{n:'Pakistán',c:'pk'},{n:'Australia',c:'au'},{n:'Nueva Zelanda',c:'nz'},
+  {n:'Otro país',c:''}
+];
+function populateCountrySelect(){
+  const sel = document.getElementById('birthCountry');
+  sel.innerHTML = COUNTRIES.map(c=>`<option value="${c.c}">${c.n}</option>`).join('');
+  sel.value = 'es';
+}
+
+let citySelectedCoords = null;
+let cityDebounce = null;
+async function searchCities(query, countryCode){
+  const box = document.getElementById('citySuggestions');
+  if(query.length < 3){ box.classList.remove('show'); box.innerHTML=''; return; }
+  box.innerHTML = '<div class="city-suggestion-loading">Buscando...</div>';
+  box.classList.add('show');
+  try{
+    const params = new URLSearchParams({ format:'json', q:query, limit:'6', addressdetails:'1' });
+    if(countryCode) params.set('countrycodes', countryCode);
+    const res = await fetch(`https://nominatim.openstreetmap.org/search?${params.toString()}`, {
+      headers:{ 'Accept-Language':'es' }
+    });
+    const data = await res.json();
+    if(!data.length){
+      box.innerHTML = '<div class="city-suggestion-empty">Sin resultados — prueba con otro nombre o usa coordenadas manuales abajo.</div>';
+      return;
+    }
+    box.innerHTML = data.map((d,i)=>`<div class="city-suggestion-item" data-i="${i}">${d.display_name}</div>`).join('');
+    box.querySelectorAll('.city-suggestion-item').forEach(el=>{
+      el.addEventListener('click', ()=>{
+        const d = data[parseInt(el.dataset.i,10)];
+        citySelectedCoords = { lat: parseFloat(d.lat), lon: parseFloat(d.lon) };
+        document.getElementById('birthCity').value = d.display_name;
+        document.getElementById('citySelectedNote').textContent = `Ubicación detectada · lat ${citySelectedCoords.lat.toFixed(3)}, lon ${citySelectedCoords.lon.toFixed(3)}`;
+        box.classList.remove('show'); box.innerHTML='';
+      });
+    });
+  }catch(e){
+    box.innerHTML = '<div class="city-suggestion-empty">No se pudo conectar con el buscador de ciudades — usa coordenadas manuales abajo.</div>';
+  }
+}
+document.getElementById('birthCity').addEventListener('input', (e)=>{
+  citySelectedCoords = null;
+  document.getElementById('citySelectedNote').textContent = '';
+  clearTimeout(cityDebounce);
+  const q = e.target.value.trim();
+  const country = document.getElementById('birthCountry').value;
+  cityDebounce = setTimeout(()=> searchCities(q, country), 500);
+});
+document.addEventListener('click', (e)=>{
+  const box = document.getElementById('citySuggestions');
+  if(box && !box.contains(e.target) && e.target.id !== 'birthCity'){ box.classList.remove('show'); }
+});
+document.getElementById('toggleManualCoords').addEventListener('click', ()=>{
+  const row = document.getElementById('manualCoordsRow');
+  row.style.display = row.style.display==='none' ? 'flex' : 'none';
+});
+populateCountrySelect();
+
+document.getElementById('natalBtn').addEventListener('click', ()=>{
+  const bd=document.getElementById('birthDate').value;
+  const bt=document.getElementById('birthTime').value||'12:00';
+  let lat, lon;
+  if(citySelectedCoords){
+    lat = citySelectedCoords.lat; lon = citySelectedCoords.lon;
+  } else {
+    lat = parseFloat(document.getElementById('birthLat').value);
+    lon = parseFloat(document.getElementById('birthLon').value);
+  }
+  if(!bd){ alert('Introduce tu fecha de nacimiento.'); return; }
+  const [y,m,day]=bd.split('-').map(Number);
+  const [hh,mm]=bt.split(':').map(Number);
+  const dateObj = new Date(Date.UTC(y, m-1, day, hh, mm));
+  document.getElementById('resSun').textContent = sunSign(m, day);
+  document.getElementById('resMoon').textContent = moonSignApprox(dateObj);
+  document.getElementById('resAsc').textContent = (isNaN(lat)||isNaN(lon)) ? 'Elige tu ciudad arriba' : ascendantApprox(dateObj, lon, lat);
+  const info=moonPhaseInfo(dateObj);
+  document.getElementById('resMoonPhase').textContent = info.e+' '+info.name;
+  document.getElementById('astroResults').classList.add('show');
+});
+
+
+/* ============ ANALYTICS-SAFE CONTACT TRACKING ============ */
+function trackContact(action){
+  try{
+    if (typeof gtag === 'function') gtag('event', 'contact_click', { method: action });
+    if (typeof fbq === 'function') fbq('track', 'Contact', { method: action });
+  }catch(e){ /* analytics no configurado todavía, no pasa nada */ }
+}
+
+/* ============ TIRADA DE LA SEMANA / DEL MES ============ */
+function isoWeekKey(date){
+  const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+  const dayNum = (d.getUTCDay() + 6) % 7;
+  d.setUTCDate(d.getUTCDate() - dayNum + 3);
+  const firstThursday = new Date(Date.UTC(d.getUTCFullYear(),0,4));
+  const week = 1 + Math.round(((d - firstThursday) / 86400000 - 3 + ((firstThursday.getUTCDay()+6)%7)) / 7);
+  return `${d.getUTCFullYear()}-W${week}`;
+}
+function monthKey(date){ return `${date.getFullYear()}-${date.getMonth()+1}`; }
+
+function fixedPeriodDraw(count, rng){
+  // Tirada uniforme (sin ponderar por el regente del día) para que el resultado
+  // se mantenga estable durante toda la semana o el mes, sin importar qué día se consulte.
+  const pool=[...Array(DECK.length).keys()];
+  for(let i=pool.length-1;i>0;i--){ const j=Math.floor(rng()*(i+1)); [pool[i],pool[j]]=[pool[j],pool[i]]; }
+  return pool.slice(0,count).map(idx=>({card:DECK[idx], reversed: rng()<0.35}));
+}
+function renderFixedDraw(containerId, seedBase, count, positions){
+  const rng = mulberry32(hashString(seedBase));
+  const draws = fixedPeriodDraw(count, rng);
+  const box = document.getElementById(containerId);
+  box.innerHTML = draws.map((d,i)=>`
+    <div class="tarot-card${d.reversed?' reversed':''}">
+      <div class="position-label">${positions[i]}</div>
+      ${cardFaceHTML(d.card)}
+      <div class="cardname">${d.card.name}${d.reversed?' (inv.)':''}</div>
+      <div class="cardmean">${d.reversed?d.card.rev:d.card.up}</div>
+    </div>`).join('');
+  return draws;
+}
+document.getElementById('weekDrawBtn').addEventListener('click', ()=>{
+  renderFixedDraw('weekCardBox', 'semana|'+isoWeekKey(new Date()), 1, ['Esta semana']);
+});
+document.getElementById('monthDrawBtn').addEventListener('click', ()=>{
+  const positions = ['Energía general','Desafío','Consejo'];
+  const draws = renderFixedDraw('monthCardBox', 'mes|'+monthKey(new Date()), 3, positions);
+  renderSynthesis('monthSynthesisBox', draws, positions, 'Tirada del Mes');
+});
+
+/* ============ HOROSCOPO SEMANAL POR SIGNO ============ */
+const HOROSCOPE_THEMES = [
+  'una semana de comienzos: confía en el primer paso aunque no veas todo el camino.',
+  'foco en tus recursos: es momento de valorar lo que ya tienes antes de buscar más.',
+  'las conversaciones importan esta semana; una noticia puede cambiar tu ánimo.',
+  'la vida familiar y tus raíces piden atención; cuida tu espacio seguro.',
+  'brilla sin miedo: hay una oportunidad de mostrarte tal como eres.',
+  'orden y detalle: pequeños ajustes esta semana traen alivio real.',
+  'una relación pide equilibrio; escucha antes de decidir.',
+  'una transformación silenciosa está en marcha, aunque no lo notes aún.',
+  'las ganas de expandirte se cruzan con la prudencia; elige con calma.',
+  'tu vocación pide un paso más serio esta semana.',
+  'la comunidad y los proyectos compartidos traen buenas noticias.',
+  'tu mundo interior necesita silencio; no fuerces nada hacia afuera.'
+];
+function renderHoroscopeSelect(){
+  const sel = document.getElementById('horoscopeSign');
+  sel.innerHTML = ZODIAC_ORDER.map(s=>`<option value="${s}">${s}</option>`).join('');
+  sel.addEventListener('change', renderHoroscopeResult);
+}
+function renderHoroscopeResult(){
+  const sign = document.getElementById('horoscopeSign').value || ZODIAC_ORDER[0];
+  const idx = ZODIAC_ORDER.indexOf(sign);
+  const week = isoWeekKey(new Date());
+  const rng = mulberry32(hashString(sign+'|'+week));
+  const theme = HOROSCOPE_THEMES[(idx + Math.floor(rng()*3)) % HOROSCOPE_THEMES.length];
+  document.getElementById('horoscopeResult').innerHTML = `
+    <div class="title">${sign}</div>
+    <p class="desc">Esta semana trae ${theme}</p>`;
+  document.getElementById('horoscopeWeekLabel').textContent = week;
+}
+
+/* ============ INIT ============ */
+renderActivationBox();
+renderSpreadTabs();
+renderSpreadInfo();
+renderRuneTabs();
+renderTodayMoon();
+renderRetroTable();
+renderHoroscopeSelect();
+renderHoroscopeResult();
+</script>
+</body>
+</html>
